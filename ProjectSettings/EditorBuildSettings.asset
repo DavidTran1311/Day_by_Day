@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype_David.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: b6a21b28447c5054fbd2e70023e1a1f0
   m_configObjects: {}

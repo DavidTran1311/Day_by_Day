@@ -11,16 +11,18 @@ public class RoomSwap : MonoBehaviour
 
     private void Update()
     {
-        
+       
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("something has entered my trigger");
+        
         if (other.gameObject.tag == "Player")
         {
             LoadA();
-        }
+        } 
     }
 
     public void LoadA()
