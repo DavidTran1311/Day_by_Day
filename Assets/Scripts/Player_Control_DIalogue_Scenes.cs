@@ -33,8 +33,18 @@ public class Player_Control_DIalogue_Scenes : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + Movement * speed * Time.fixedDeltaTime);
+
+        if (Movement.x != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.fixedDeltaTime, rb.position.y));
+        }
+
+
+        if (Movement.y != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.fixedDeltaTime));
+            Debug.Log("true");
+        }
+
     }
-
-
 }
