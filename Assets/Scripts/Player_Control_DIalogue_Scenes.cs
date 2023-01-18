@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player_Control_DIalogue_Scenes : MonoBehaviour
 {
-    private float horizontal;
-    private float Vertical;
+
     Vector2 Movement;
-    private float speed = 8f;
+    private float speed = 20f;
     [SerializeField] private Rigidbody2D rb;
+    public GameObject ladder;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +19,28 @@ public class Player_Control_DIalogue_Scenes : MonoBehaviour
     void Update()
     {
 
+        /*
         if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
             return;
         }
+        */
 
 
         Movement.x = Input.GetAxisRaw("Horizontal");
         Movement.y = Input.GetAxisRaw("Vertical");
+
+        if (Movement.x != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
+        }
+
+
+        if (Movement.y != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
+
+        }
 
 
     }
@@ -34,17 +48,7 @@ public class Player_Control_DIalogue_Scenes : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (Movement.x != 0)
-        {
-            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.fixedDeltaTime, rb.position.y));
-        }
-
-
-        if (Movement.y != 0)
-        {
-            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.fixedDeltaTime));
-            Debug.Log("true");
-        }
+        
 
     }
 }
