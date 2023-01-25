@@ -12,6 +12,8 @@ public class Ladder : MonoBehaviour
     float cooldown;
     bool cdstart;
     public float cooldowntime;
+    public GameObject meter;
+    GameObject cm;
     bool cdavail;
 
     // Start is called before the first frame update
@@ -60,15 +62,18 @@ public class Ladder : MonoBehaviour
             {
 
                 cdstart = true;
+                p.transform.position = transform.position;
+                
+
 
                 //if getting on ladder
                 //else getting off
-                p.transform.position = transform.position;
                 if (off == true)
                 {
                     off = false;
                     sr.color = Color.red;
                     bc.offset = new Vector2(-0.06f, -1.4f);
+                    cm = Instantiate(meter, new Vector2(5.3f, -0.5f), Quaternion.identity);
 
                 }
                 else
@@ -76,6 +81,7 @@ public class Ladder : MonoBehaviour
                     off = true;
                     sr.color = Color.blue;
                     bc.offset = new Vector2(-0.06f, 1f);
+                    Destroy(cm);
 
                 }
 

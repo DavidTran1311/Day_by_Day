@@ -631,6 +631,7 @@ MonoBehaviour:
   off: 0
   bc: {fileID: 132802783}
   cooldowntime: 1
+  meter: {fileID: 8941842699842354682, guid: c47c5326b92bfa44884b3ac104698338, type: 3}
 --- !u!61 &1214055399
 BoxCollider2D:
   m_ObjectHideFlags: 0
