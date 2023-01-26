@@ -6,7 +6,9 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 public class Dialogue_Manager : MonoBehaviour
 {
-
+    [Header("Params")]
+    [SerializeField] private float typingSpeed = 0.04f;
+    
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -92,8 +94,8 @@ public class Dialogue_Manager : MonoBehaviour
 
         if (CurrentStory.canContinue)
         {
-           
-            dialogueText.text = CurrentStory.Continue();
+
+            StartCoroutine(DisplayLine(CurrentStory.Continue()));
             DisplayChoices();
 
             //handle tags
@@ -104,6 +106,17 @@ public class Dialogue_Manager : MonoBehaviour
             
             ExitDialogueMode();
            
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+
+        foreach (char letter in line.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 
