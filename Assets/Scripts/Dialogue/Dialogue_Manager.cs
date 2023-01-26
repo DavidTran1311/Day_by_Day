@@ -10,6 +10,8 @@ public class Dialogue_Manager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private Animator portraitAnimator;
 
     private Story CurrentStory;
 
@@ -21,6 +23,10 @@ public class Dialogue_Manager : MonoBehaviour
     private TextMeshProUGUI[] ChoicesText;
 
     public bool DialogueIsPlaying { get; private set; }
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
 
     private void Awake()
     {
@@ -89,12 +95,45 @@ public class Dialogue_Manager : MonoBehaviour
            
             dialogueText.text = CurrentStory.Continue();
             DisplayChoices();
+
+            //handle tags
+            HandleTags(CurrentStory.currentTags);
         }
         else
         {
             
             ExitDialogueMode();
            
+        }
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    portraitAnimator.Play(tagValue);
+                    break;
+                case LAYOUT_TAG:
+                    Debug.Log("layout=" + tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is currently being handled: " + tag);
+                    break;
+            }
         }
     }
 
