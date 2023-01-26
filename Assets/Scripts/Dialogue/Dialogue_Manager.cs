@@ -26,6 +26,10 @@ public class Dialogue_Manager : MonoBehaviour
 
     public bool DialogueIsPlaying { get; private set; }
 
+    private bool canContinueToNextLine = false;
+
+    private Coroutine displayLineCoroutine;
+
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
@@ -66,7 +70,7 @@ public class Dialogue_Manager : MonoBehaviour
         {
             return;
         }
-        if (CurrentStory.currentChoices.Count==0 && Input.GetKeyDown(KeyCode.R))
+        if (canContinueToNextLine && CurrentStory.currentChoices.Count==0 && Input.GetKeyDown(KeyCode.R))
         {
             ContinueStory();
         }
@@ -94,8 +98,12 @@ public class Dialogue_Manager : MonoBehaviour
 
         if (CurrentStory.canContinue)
         {
-
-            StartCoroutine(DisplayLine(CurrentStory.Continue()));
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            
+            displayLineCoroutine = StartCoroutine(DisplayLine(CurrentStory.Continue()));
             DisplayChoices();
 
             //handle tags
@@ -113,11 +121,15 @@ public class Dialogue_Manager : MonoBehaviour
     {
         dialogueText.text = "";
 
+        canContinueToNextLine = false;
+
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        canContinueToNextLine = true;
     }
 
     private void HandleTags(List<string> currentTags)
@@ -182,7 +194,11 @@ public class Dialogue_Manager : MonoBehaviour
 
     public void MakeChoice(int ChoiceIndex) {
 
-        CurrentStory.ChooseChoiceIndex(ChoiceIndex);
-        ContinueStory();
+        if (canContinueToNextLine)
+        {
+            CurrentStory.ChooseChoiceIndex(ChoiceIndex);
+            ContinueStory();
+        }
+
     }
 }
