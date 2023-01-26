@@ -34,7 +34,9 @@ What, spending all your efforts in a dead-end warehouse job that barely gets us 
 -> job
 + It's the only job I can get. #speaker:Mr. Davis #portrait:davis_neutral
     I can't just quit my job and get a "better" one. How do you even expect me to compete with the others? #speaker:Mr. Davis #portrait:davis_neutral
-    I'm pushing thirty, I don't have a college degree, and I can't even go back to school because all the money I get is paying for our sons and your useless trinkets. #speaker:Mr. Davis #portrait:davis_neutral
+    I'm pushing thirty. #speaker:Mr. Davis #portrait:davis_neutral
+    I don't have a college degree. #speaker:Mr. Davis #portrait:davis_neutral
+    I can't even go back to school because all the money I get is paying for our sons and your useless trinkets. #speaker:Mr. Davis #portrait:davis_neutral
     All I can do is push boxes around and come home with a paycheck so I can put food on the table. #speaker:Mr. Davis #portrait:davis_neutral
 -> trinkets
 
@@ -49,12 +51,15 @@ You didn't have to ask me. That's just what you do when you're in a relationship
 Would it kill you to be a better father? Maybe get a better job wehre you're not putting yourself in danger? #speaker:Lily #portrait:lily_neutral
 I told you, I'm trying my best. Plus, this is the only job I can get. #speaker:Mr. Davis #portrait:davis_neutral
 I can't just quit my job and get a "better" one. How do you even expect me to compete with the others? #speaker:Mr. Davis #portrait:davis_neutral
-    I'm pushing thirty, I don't have a college degree, and I can't even go back to school because all the money I get is paying for our sons and your useless trinkets. #speaker:Mr. Davis #portrait:davis_neutral
+    I'm pushing thirty. #speaker:Mr. Davis #portrait:davis_neutral
+    I don't have a college degree. #speaker:Mr. Davis #portrait:davis_neutral
+    I can't even go back to school because all the money I get is paying for our sons and your useless trinkets. #speaker:Mr. Davis #portrait:davis_neutral
     All I can do is push boxes around and come home with a paycheck so I can put food on the table. #speaker:Mr. Davis #portrait:davis_neutral
 -> trinkets
 
 === trinkets ===
-I buy those "useless trinkets" because it makes me happy. You might have forgotten what being happy was like but they remind me that I can still be happy. #speaker:Lily #portrait:lily_neutral
+I buy those "useless trinkets" because it makes me happy. #speaker:Lily #portrait:lily_neutral
+You might have forgotten what being happy was like but they remind me that I can still be happy. #speaker:Lily #portrait:lily_neutral
 I thought my husband was the one who was supposed to make me happy but I guess the fuck not. #speaker:Lily #portrait:lily_neutral
 + You ask for too much. #speaker:Mr. Davis #portrait:davis_neutral
 -> tooMuch
@@ -65,7 +70,8 @@ I thought my husband was the one who was supposed to make me happy but I guess t
 Fuck you. Can't I want things in this shitty life you gave me? #speaker:Lily #portrait:lily_neutral
 + Nothing's stopping you from leaving this life. #speaker:Mr. Davis #portrait:davis_neutral
 I'm staying for George and Alex. The least you can do is act like a husband. #speaker:Lily #portrait:lily_neutral
-Look, I don't want to argue anymore, I'm getting tired. I have to go to the hospital to see George. #speaker:Lily #portrait:lily_neutral
+Look, I don't want to argue anymore, I'm getting tired.  #speaker:Lily #portrait:lily_neutral
+I have to go to the hospital to see George. #speaker:Lily #portrait:lily_neutral
 -> youStarted
 + [Leave.] #speaker:Mr. Davis #portrait:davis_neutral
 -> leave
@@ -82,8 +88,10 @@ Are you saying it's mine? #speaker:Lily #portrait:lily_neutral
 -> noFault
 + A little bit, yeah. #speaker:Mr. Davis #portrait:davis_neutral
     I'm doing all I can and at least it's keeping this roof over your head. #speaker:Mr. Davis #portrait:davis_neutral
-    You can't just shift all the blame to me. I'm also doing all I can. Why am I being blamed that I was forced to be a housewife? #speaker:Lily #portrait:lily_neutral
-    Look, I don't want to argue anymore, I'm getting tired. I have to go to the hospital to see George. #speaker:Lily #portrait:lily_neutral
+    You can't just shift all the blame to me. I'm also doing all I can. #speaker:Lily #portrait:lily_neutral
+    Why am I being blamed that I was forced to be a housewife? #speaker:Lily #portrait:lily_neutral
+    Look, I don't want to argue anymore, I'm getting tired. #speaker:Lily #portrait:lily_neutral
+    I have to go to the hospital to see George. #speaker:Lily #portrait:lily_neutral
 -> youStarted
     
 === noFault ===
@@ -107,7 +115,10 @@ Whatever, this is getting nowhere. I have to go to the hospital. #speaker:Lily #
 -> leave
 
 === myPart ===
-You think I'm complaining? I'm doing so much to support this family. But, there's only so much I can do when money is tight and we have a child in the hospital and another child to take care of. #speaker:Lily #portrait:lily_neutral
+You think I'm complaining? I'm doing so much to support this family. #speaker:Lily #portrait:lily_neutral
+There's only so much I can do when money is tight. #speaker:Lily #portrait:lily_neutral
+We have a nine year old child in the hospital. #speaker:Lily #portrait:lily_neutral
+We also have a seven year old child to take care of. #speaker:Lily #portrait:lily_neutral
 + I don't know what you want me to do. #speaker:Mr. Davis #portrait:davis_neutral
 -> dontKnow
 + [Leave.] #speaker:Mr. Davis #portrait:davis_neutral
@@ -132,7 +143,8 @@ Nothing's ever good enough for you. #speaker:Mr. Davis #portrait:davis_neutral
 -> END
 
 === lateForWork ===
-Yeah, well, you're late for work. You better leave now before you get fired. You can't lose it. #speaker:Lily #portrait:lily_neutral
+Yeah, well, you're late for work. You better leave now before you get fired. #speaker:Lily #portrait:lily_neutral
+You can't lose it. #speaker:Lily #portrait:lily_neutral
 
 ...Sure. #speaker:Mr. Davis #portrait:davis_neutral
 

@@ -15,6 +15,7 @@ public class Dialogue_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
+    private bool submitButtonPressedThisFrame = false;
 
     private Story CurrentStory;
 
@@ -67,12 +68,18 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            submitButtonPressedThisFrame = true;
+        }
+
         if (!DialogueIsPlaying)
         {
             return;
         }
-        if (canContinueToNextLine && CurrentStory.currentChoices.Count==0 && Input.GetKeyDown(KeyCode.R))
+        if (canContinueToNextLine && CurrentStory.currentChoices.Count==0 && submitButtonPressedThisFrame)
         {
+            submitButtonPressedThisFrame = false;
             ContinueStory();
         }
     }
@@ -129,16 +136,17 @@ public class Dialogue_Manager : MonoBehaviour
 
         foreach (char letter in line.ToCharArray())
         {
-           dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
             
-            if (Input.GetKeyDown(KeyCode.R))
+            if (submitButtonPressedThisFrame)
             {
+                submitButtonPressedThisFrame = false;
                 dialogueText.text = line;
                 break;
             }
 
-            
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+  
         }
 
         continueIcon.SetActive(true);

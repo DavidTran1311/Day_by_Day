@@ -6,6 +6,7 @@ public class RoomSwap : MonoBehaviour
 {
     [SerializeField] private GameObject popUpUI;
     [SerializeField] private GameObject visualCue;
+    [SerializeField] private GameObject visualE;
     public string LadderMinigame;
     public float inRange;
 
@@ -13,6 +14,8 @@ public class RoomSwap : MonoBehaviour
     {
         visualCue.SetActive(false);
         popUpUI.SetActive(false);
+        visualE.SetActive(false);
+
         inRange = 0f;
     }
 
@@ -30,7 +33,8 @@ public class RoomSwap : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
 
-                visualCue.SetActive(true);
+            visualCue.SetActive(true);
+            visualE.SetActive(true);
             inRange = 1f;
         } 
     }
@@ -41,6 +45,7 @@ public class RoomSwap : MonoBehaviour
         {
             popUpUI.SetActive(false);
             visualCue.SetActive(false);
+            visualE.SetActive(false);
             Time.timeScale = 1f;
             inRange = 0f;
         }
