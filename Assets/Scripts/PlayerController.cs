@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+       if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
+        {
+            return;
+        }
+        
         rb.MovePosition(rb.position + Movement * speed * Time.fixedDeltaTime);
     }
 

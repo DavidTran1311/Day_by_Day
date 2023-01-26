@@ -4,30 +4,58 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class RoomSwap : MonoBehaviour
 {
+    [SerializeField] private GameObject popUpUI;
+    [SerializeField] private GameObject visualCue;
+    public string LadderMinigame;
+    public float inRange;
+
     void Start()
     {
-        Debug.Log("LoadSceneA");
+        visualCue.SetActive(false);
+        popUpUI.SetActive(false);
+        inRange = 0f;
     }
 
     private void Update()
     {
-       
+         if (Input.GetKeyDown(KeyCode.E) && inRange == 1f)
+            {
+                popUpUI.SetActive(true);
+                Time.timeScale = 0f;
+            }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("something has entered my trigger");
-        
         if (other.gameObject.tag == "Player")
         {
-            LoadA();
+
+                visualCue.SetActive(true);
+            inRange = 1f;
         } 
     }
 
-    public void LoadA()
+    private void OnTriggerExit2D(Collider2D other)
     {
-    SceneManager.LoadScene("Hospital");
+        if (other.gameObject.tag == "Player")
+        {
+            popUpUI.SetActive(false);
+            visualCue.SetActive(false);
+            Time.timeScale = 1f;
+            inRange = 0f;
+        }
+    }
+
+    public void LoadLadderMinigame()
+    {
+    SceneManager.LoadScene("LadderMinigame");
+        Time.timeScale = 1f;
+    }
+
+    public void DeactivateOverlay()
+    {
+        popUpUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 }

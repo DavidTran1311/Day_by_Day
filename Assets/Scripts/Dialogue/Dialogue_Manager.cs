@@ -11,6 +11,7 @@ public class Dialogue_Manager : MonoBehaviour
     
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
@@ -104,7 +105,7 @@ public class Dialogue_Manager : MonoBehaviour
             }
             
             displayLineCoroutine = StartCoroutine(DisplayLine(CurrentStory.Continue()));
-            DisplayChoices();
+            
 
             //handle tags
             HandleTags(CurrentStory.currentTags);
@@ -121,15 +122,37 @@ public class Dialogue_Manager : MonoBehaviour
     {
         dialogueText.text = "";
 
+        continueIcon.SetActive(false);
+        HideChoices();
+
         canContinueToNextLine = false;
 
         foreach (char letter in line.ToCharArray())
         {
-            dialogueText.text += letter;
+           dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
+            
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                dialogueText.text = line;
+                break;
+            }
+
+            
         }
 
+        continueIcon.SetActive(true);
+        DisplayChoices();
+
         canContinueToNextLine = true;
+    }
+
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in Choices)
+        {
+            choiceButton.SetActive(false);
+        }
     }
 
     private void HandleTags(List<string> currentTags)
