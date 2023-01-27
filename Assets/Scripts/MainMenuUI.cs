@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenuUI : MonoBehaviour
 {
     public string Apartment;
+    public string Menu;
 
     public Image fadeScreen;
     public GameObject fadePanel;
@@ -19,7 +20,7 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fadePanel.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -46,13 +47,17 @@ public class MainMenuUI : MonoBehaviour
 
     public void FadeToBlack()
     {
-        fadePanel.SetActive(true);
         shouldFadeToBlack = true;
         shouldFadeFromBlack = false;
+
+        Instantiate(fadePanel, new Vector3(2.0f, 0, 0), Quaternion.identity);
+        Destroy(fadePanel);
     }
 
     public void FadeFromBlack()
     {
+        Instantiate(fadePanel, new Vector3(2.0f, 0, 0), Quaternion.identity);
+        
         shouldFadeFromBlack = true;
         shouldFadeToBlack = false;
     }
@@ -70,5 +75,10 @@ public class MainMenuUI : MonoBehaviour
         Application.Quit();
 
         Debug.Log("Quit");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(Menu);
     }
 }
