@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialogue_Trigger : MonoBehaviour
 {
     [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
+    [SerializeField] private GameObject visualCue, visualE;
     private bool PlayerInRange;
 
 
@@ -15,12 +15,14 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         PlayerInRange = false;
         visualCue.SetActive(false);
+        visualE.SetActive(false);
     }
 
     private void Update()
     {
         if (PlayerInRange==true && !Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
+            visualE.SetActive(true);
             visualCue.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
@@ -29,7 +31,11 @@ public class Dialogue_Trigger : MonoBehaviour
             }
 
         }
-        else { visualCue.SetActive(false); }
+        else 
+        { 
+            visualE.SetActive(false); 
+            visualCue.SetActive(false); 
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

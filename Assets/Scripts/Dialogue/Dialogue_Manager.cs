@@ -6,10 +6,16 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 public class Dialogue_Manager : MonoBehaviour
 {
-
+    [Header("Params")]
+    [SerializeField] private float typingSpeed = 0.04f;
+    
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private Animator portraitAnimator;
+    private bool submitButtonPressedThisFrame = false;
 
     private Story CurrentStory;
 
@@ -21,6 +27,14 @@ public class Dialogue_Manager : MonoBehaviour
     private TextMeshProUGUI[] ChoicesText;
 
     public bool DialogueIsPlaying { get; private set; }
+
+    private bool canContinueToNextLine = false;
+
+    private Coroutine displayLineCoroutine;
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
 
     private void Awake()
     {
@@ -54,12 +68,18 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            submitButtonPressedThisFrame = true;
+        }
+
         if (!DialogueIsPlaying)
         {
             return;
         }
-        if (CurrentStory.currentChoices.Count==0 && Input.GetKeyDown(KeyCode.R))
+        if (canContinueToNextLine && CurrentStory.currentChoices.Count==0 && submitButtonPressedThisFrame)
         {
+            submitButtonPressedThisFrame = false;
             ContinueStory();
         }
     }
@@ -86,15 +106,90 @@ public class Dialogue_Manager : MonoBehaviour
 
         if (CurrentStory.canContinue)
         {
-           
-            dialogueText.text = CurrentStory.Continue();
-            DisplayChoices();
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            
+            displayLineCoroutine = StartCoroutine(DisplayLine(CurrentStory.Continue()));
+            
+
+            //handle tags
+            HandleTags(CurrentStory.currentTags);
         }
         else
         {
             
             ExitDialogueMode();
            
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+
+        continueIcon.SetActive(false);
+        HideChoices();
+
+        canContinueToNextLine = false;
+
+        foreach (char letter in line.ToCharArray())
+        {
+            
+            if (submitButtonPressedThisFrame)
+            {
+                submitButtonPressedThisFrame = false;
+                dialogueText.text = line;
+                break;
+            }
+
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+  
+        }
+
+        continueIcon.SetActive(true);
+        DisplayChoices();
+
+        canContinueToNextLine = true;
+    }
+
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in Choices)
+        {
+            choiceButton.SetActive(false);
+        }
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    portraitAnimator.Play(tagValue);
+                    break;
+                case LAYOUT_TAG:
+                    Debug.Log("layout=" + tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is currently being handled: " + tag);
+                    break;
+            }
         }
     }
 
@@ -130,7 +225,11 @@ public class Dialogue_Manager : MonoBehaviour
 
     public void MakeChoice(int ChoiceIndex) {
 
-        CurrentStory.ChooseChoiceIndex(ChoiceIndex);
-        ContinueStory();
+        if (canContinueToNextLine)
+        {
+            CurrentStory.ChooseChoiceIndex(ChoiceIndex);
+            ContinueStory();
+        }
+
     }
 }
