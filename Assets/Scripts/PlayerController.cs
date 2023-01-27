@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private float Vertical;
     Vector2 Movement;
-    private float speed = 5f;
+    private float speed = 25f;
     [SerializeField] private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,31 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-     
 
 
         Movement.x = Input.GetAxisRaw("Horizontal");
             Movement.y = Input.GetAxisRaw("Vertical");
-        
+
+        if (Movement.x != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
+        }
+
+
+        if (Movement.y != 0)
+        {
+            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
+
+        }
+
+        if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
+        {
+            return;
+        }
+        else
+        {
+
+        }
 
     }
 
@@ -38,7 +57,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         
-        rb.MovePosition(rb.position + Movement * speed * Time.fixedDeltaTime);
+        
     }
 
  

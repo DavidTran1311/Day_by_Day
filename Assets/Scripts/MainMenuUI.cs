@@ -13,6 +13,8 @@ public class MainMenuUI : MonoBehaviour
     public GameObject fadePanel;
     public float fadeSpeed;
     public bool shouldFadeToBlack, shouldFadeFromBlack;
+    public GameObject gameOverPanel;
+    public GameObject summaryBG;
 
     public static MainMenuUI instance;
 
@@ -20,7 +22,8 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOverPanel.SetActive(false);
+        summaryBG.SetActive(true);
     }
 
     // Update is called once per frame
@@ -80,5 +83,14 @@ public class MainMenuUI : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(Menu);
+    }
+
+    public void GameOverScreen()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            summaryBG.SetActive(false);
+            gameOverPanel.SetActive(true);
+        }
     }
 }
