@@ -71,7 +71,7 @@ public class Ladder : MonoBehaviour
                 if (off == true)
                 {
                     off = false;
-                    sr.color = Color.red;
+                    //sr.color = Color.red;
                     bc.offset = new Vector2(-0.06f, -1.4f);
                     cm = Instantiate(meter, new Vector2(5.3f, -0.5f), Quaternion.identity);
 
@@ -79,7 +79,7 @@ public class Ladder : MonoBehaviour
                 else
                 {
                     off = true;
-                    sr.color = Color.blue;
+                    //sr.color = Color.blue;
                     bc.offset = new Vector2(-0.06f, 1f);
                     Destroy(cm);
 

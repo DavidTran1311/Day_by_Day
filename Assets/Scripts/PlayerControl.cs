@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     Vector2 Movement;
-    private float speed = 20f;
+    private float speed = 25f;
     [SerializeField] private Rigidbody2D rb;
     public GameObject ladder;
     public Ladder lad;
