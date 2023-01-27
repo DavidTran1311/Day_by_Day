@@ -28,23 +28,23 @@ public class Balancemeter : MonoBehaviour
         if (transform.position.x > initialX)
         {
 
-            rb.AddForce(new Vector2(bForce/100, 0), ForceMode2D.Force);
+            rb.AddForce(new Vector2(bForce/50, 0), ForceMode2D.Force);
 
         } else
         {
 
-            rb.AddForce(new Vector2(-bForce / 100, 0), ForceMode2D.Force);
+            rb.AddForce(new Vector2(-bForce/50, 0), ForceMode2D.Force);
 
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(new Vector2(bForce / 50, 0), ForceMode2D.Force);
+            rb.AddForce(new Vector2(bForce/25, 0), ForceMode2D.Force);
             Debug.Log("Right");
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(new Vector2(-bForce / 50, 0), ForceMode2D.Force);
+            rb.AddForce(new Vector2(-bForce/25, 0), ForceMode2D.Force);
             Debug.Log("Left");
         }
 
