@@ -40,6 +40,12 @@ public class PlayerControl : MonoBehaviour
 
             anim.SetBool("isLadder", false);
 
+            if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
+            {
+                Time.timeScale = 1f;
+                return;
+            }
+
             if (Movement.x != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));

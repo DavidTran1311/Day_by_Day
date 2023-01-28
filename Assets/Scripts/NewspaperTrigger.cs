@@ -2,47 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue_Trigger : MonoBehaviour
+public class NewspaperTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue, visualE;
+    [SerializeField] private GameObject visualCue, visualE, newspaperPanel;
     private bool PlayerInRange;
 
-
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         PlayerInRange = false;
         visualCue.SetActive(false);
         visualE.SetActive(false);
+        newspaperPanel.SetActive(false);
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (PlayerInRange==true && !Dialogue_Manager.GetInstance().DialogueIsPlaying)
+        if (PlayerInRange == true)
         {
             visualE.SetActive(true);
             visualCue.SetActive(true);
+
             if (Input.GetKey(KeyCode.E))
             {
-                Dialogue_Manager.GetInstance().EnterDialogueMode(inkJSON); 
-
+                newspaperPanel.SetActive(true);
+                Time.timeScale = 0f;
             }
 
         }
-        else 
-        { 
-            visualE.SetActive(false); 
-            visualCue.SetActive(false); 
+        else
+        {
+            visualE.SetActive(false);
+            visualCue.SetActive(false);
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            newspaperPanel.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("in range");
-
             PlayerInRange = true;
         }
     }

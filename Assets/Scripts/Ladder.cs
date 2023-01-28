@@ -20,6 +20,10 @@ public class Ladder : MonoBehaviour
     public Balancemeter bm;
     public GameObject needle;
 
+    [Header("Visual Cue")]
+    [SerializeField] private GameObject visualCue, visualE;
+    private bool PlayerInRange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +77,17 @@ public class Ladder : MonoBehaviour
             bm.strike = 0;
         }
 
+        //this is to make the trigger UI show
+        if (PlayerInRange == true)
+        {
+            visualE.SetActive(true);
+            visualCue.SetActive(true);
+        }
+        else
+        {
+            visualE.SetActive(false);
+            visualCue.SetActive(false);
+        }
 
     }
 
@@ -124,5 +139,23 @@ public class Ladder : MonoBehaviour
 
         }
 
+    }
+
+    //this is for showing the trigger UI so the player knows what to press
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerInRange = false;
+        }
     }
 }
