@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LadderMinigame.unity
     guid: 7183c2a6a35b75440a47ca4cd420ec9f
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: c1fc947c75b71ca40b413a704ab49ebc
   m_configObjects: {}
