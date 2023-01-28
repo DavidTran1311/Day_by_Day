@@ -7,10 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private float horizontal;
-    private float Vertical;
     Vector2 Movement;
-    private float speed = 25f;
+    public float speed = 3f;
     [SerializeField] private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -27,14 +25,6 @@ public class PlayerController : MonoBehaviour
         Movement.x = Input.GetAxisRaw("Horizontal");
             Movement.y = Input.GetAxisRaw("Vertical");
 
-
-
-        
-
-    }
-
-    void FixedUpdate()
-    {
 
         if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
@@ -55,6 +45,16 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+
+
+
+    }
+
+    void FixedUpdate()
+    {
+
+        
 
     }
 

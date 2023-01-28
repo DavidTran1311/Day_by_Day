@@ -15,6 +15,10 @@ public class Ladder : MonoBehaviour
     public GameObject meter;
     GameObject cm;
     bool cdavail;
+    public PlayerControl pc;
+    public Vector2 meterPos;
+    public Balancemeter bm;
+    public GameObject needle;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +29,15 @@ public class Ladder : MonoBehaviour
         cdstart = false;
         cooldown = 0;
 
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        meterPos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
+       // Debug.Log(meterPos.x);
 
         if (cdstart == true)
         {
@@ -41,6 +49,28 @@ public class Ladder : MonoBehaviour
                 cooldown = 0;
             }
 
+        }
+
+        if (off == false)
+        {
+            meter.transform.position = meterPos;
+        }
+
+
+        if (bm.fall)
+        {
+            p.transform.position = new Vector2(-1,-3);
+            off = true;
+            //sr.color = Color.blue;
+            bc.offset = new Vector2(-0.06f, 1f);
+            meter.transform.position = new Vector2(-100, 100);
+            pc.goal = 0;
+            if (pc.topped == true)
+            {
+                pc.topped = false;
+            }
+            bm.fall = false;
+            bm.strike = 0;
         }
 
 
@@ -73,15 +103,20 @@ public class Ladder : MonoBehaviour
                     off = false;
                     //sr.color = Color.red;
                     bc.offset = new Vector2(-0.06f, -1.4f);
-                    cm = Instantiate(meter, new Vector2(5.3f, -0.5f), Quaternion.identity);
-
+                    meter.transform.position = meterPos;
+                    needle.transform.position = new Vector2(meter.transform.position.x, needle.transform.position.y);
+                     
                 }
                 else
                 {
                     off = true;
                     //sr.color = Color.blue;
                     bc.offset = new Vector2(-0.06f, 1f);
-                    Destroy(cm);
+                    meter.transform.position = new Vector2(-100,100);
+                    if (pc.topped == true)
+                    {
+                        pc.topped = false;
+                    }
 
                 }
 
