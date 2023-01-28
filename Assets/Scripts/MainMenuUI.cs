@@ -46,6 +46,8 @@ public class MainMenuUI : MonoBehaviour
                 shouldFadeFromBlack = false;
             }
         }
+
+        GameOverScreen();
     }
 
     public void FadeToBlack()
@@ -91,6 +93,8 @@ public class MainMenuUI : MonoBehaviour
         {
             summaryBG.SetActive(false);
             gameOverPanel.SetActive(true);
+
+            //Debug.Log("press");
         }
     }
 }

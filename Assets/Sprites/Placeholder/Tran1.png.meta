@@ -3,7 +3,7 @@ guid: c98a814d5c320b44fa0535028699a634
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -3229,22 +3228,22 @@ TextureImporter:
       Tran1_44: -2142348590
       Tran1_49: -1007875864
       Tran1_21: 1436445640
+      Tran1_64: -1390056268
       Tran1_84: -1728132487
       Tran1_130: -1584551138
-      Tran1_29: -2120478012
-      Tran1_139: 2062474680
+      Tran1_65: -548749122
       Tran1_135: 637578172
-      Tran1_64: -1390056268
+      Tran1_16: -1254908169
+      Tran1_139: 2062474680
       Tran1_1: 1034394880
       Tran1_41: 1739717743
       Tran1_124: -563200197
       Tran1_62: -720172408
       Tran1_126: -1487043280
       Tran1_93: -709685561
-      Tran1_16: -1254908169
+      Tran1_29: -2120478012
       Tran1_88: -2008664703
       Tran1_54: 1893498876
-      Tran1_65: -548749122
       Tran1_141: -1219344011
       Tran1_123: -570223707
       Tran1_140: 1004443140
