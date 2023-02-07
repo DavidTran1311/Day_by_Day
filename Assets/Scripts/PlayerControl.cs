@@ -13,11 +13,12 @@ public class PlayerControl : MonoBehaviour
     public Animator anim;
     public int goal;
     public bool topped = false;
+    public GameObject UI;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        UI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class PlayerControl : MonoBehaviour
         {
 
             anim.SetBool("isLadder", false);
+            //UI.SetActive(false);
 
             if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
             {
@@ -63,6 +65,7 @@ public class PlayerControl : MonoBehaviour
         {
 
             anim.SetBool("isLadder", true);
+            UI.SetActive(true);
 
             if (Movement.y != 0)
             {
