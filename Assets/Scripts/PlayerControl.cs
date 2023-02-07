@@ -15,10 +15,16 @@ public class PlayerControl : MonoBehaviour
     public bool topped = false;
     public GameObject UI;
 
+    float cooldown;
+    bool cdstart;
+    float cooldowntime;
+
     // Start is called before the first frame update
     void Start()
     {
         UI.SetActive(false);
+        cdstart = false;
+
     }
 
     // Update is called once per frame
@@ -51,14 +57,12 @@ public class PlayerControl : MonoBehaviour
             if (Movement.x != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
-                Debug.Log("horizontal");
             }
 
 
             if (Movement.y != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
-                Debug.Log("vertical");
             }
 
         } else
@@ -73,6 +77,22 @@ public class PlayerControl : MonoBehaviour
 
             }
         }
+
+
+
+
+        if (cdstart == true)
+        {
+
+            cooldown = cooldown + Time.deltaTime;
+            if (cooldown > cooldowntime)
+            {
+                cdstart = false;
+                cooldown = 0;
+            }
+
+        }
+
 
 
     }
@@ -95,6 +115,28 @@ public class PlayerControl : MonoBehaviour
                 goal += 1;
             }
             
+        }
+
+
+    }
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        
+        if (other.tag == "Carryable" && Input.GetKey(KeyCode.E))
+        {
+
+
+            if (cdstart == false)
+            {
+                cdstart = true;
+                Debug.Log("test");
+            }
+            
+
+
+
         }
 
 
