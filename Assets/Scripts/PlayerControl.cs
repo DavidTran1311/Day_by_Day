@@ -17,7 +17,10 @@ public class PlayerControl : MonoBehaviour
 
     float cooldown;
     bool cdstart;
-    float cooldowntime;
+    float cooldowntime = 0.5f;
+
+    bool carrying;
+    public GameObject pickup;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +96,11 @@ public class PlayerControl : MonoBehaviour
 
         }
 
+        if (carrying == true)
+        {
+            pickup.transform.position = transform.position;
+        }
+
 
 
     }
@@ -124,16 +132,67 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         
-        if (other.tag == "Carryable" && Input.GetKey(KeyCode.E))
+        if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space))
         {
 
 
             if (cdstart == false)
             {
                 cdstart = true;
-                Debug.Log("test");
+
+                if (carrying == false)
+                {
+                    carrying = true;
+                    Debug.Log(carrying);
+
+                }
+
+                else if (carrying == true)
+                {
+                    carrying = false;
+                }
+
+
+                
+
+
+
+                
             }
-            
+
+            if (other.tag == "EPlace" && Input.GetKey(KeyCode.Space))
+            {
+
+
+                if (cdstart == false)
+                {
+                    cdstart = true;
+
+                    if (carrying == false)
+                    {
+                        carrying = true;
+                        Debug.Log(carrying);
+
+                    }
+
+                    else if (carrying == true)
+                    {
+                        carrying = false;
+                    }
+
+
+
+
+
+
+
+                }
+
+
+
+
+            }
+
 
 
 
