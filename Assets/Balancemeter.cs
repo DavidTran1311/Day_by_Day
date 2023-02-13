@@ -16,6 +16,9 @@ public class Balancemeter : MonoBehaviour
     public bool fall;
     public int fallCount;
     public Ladder lad;
+    public GameObject p;
+    public GameObject lb;
+    float intensity;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,8 @@ public class Balancemeter : MonoBehaviour
     void Update()
     {
 
+        intensity = new Vector2(0, p.transform.position.y - lb.transform.position.y).magnitude *2;
+
         initialX = met.transform.position.x;
         //Debug.Log(initialX);
 
@@ -38,24 +43,24 @@ public class Balancemeter : MonoBehaviour
             if (transform.position.x > initialX)
             {
 
-                rb.AddForce(new Vector2(bForce / 5, 0), ForceMode2D.Force);
+                rb.AddForce(new Vector2(bForce * intensity, 0), ForceMode2D.Force);
 
             }
             else
             {
 
-                rb.AddForce(new Vector2(-bForce / 5, 0), ForceMode2D.Force);
+                rb.AddForce(new Vector2(-bForce * intensity, 0), ForceMode2D.Force);
 
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                rb.AddForce(new Vector2(bForce / 2.5f, 0), ForceMode2D.Force);
+                rb.AddForce(new Vector2(bForce * intensity * 2, 0), ForceMode2D.Force);
                 //Debug.Log("Right");
             }
             if (Input.GetKey(KeyCode.A))
             {
-                rb.AddForce(new Vector2(-bForce / 2.5f, 0), ForceMode2D.Force);
+                rb.AddForce(new Vector2(-bForce * intensity * 2, 0), ForceMode2D.Force);
                 //Debug.Log("Left");
             }
         }

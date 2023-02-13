@@ -85,7 +85,7 @@ public class PlayerControl : MonoBehaviour
 
             if (Movement.y != 0)
             {
-                rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed/3 * Time.deltaTime));
+                rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed/6 * Time.deltaTime));
 
             }
         }
