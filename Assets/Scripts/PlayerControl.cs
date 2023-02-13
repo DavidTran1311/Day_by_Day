@@ -20,13 +20,22 @@ public class PlayerControl : MonoBehaviour
     float cooldowntime = 0.5f;
 
     bool carrying;
-    public GameObject pickup;
+    public GameObject Dropoff;
+    public GameObject[] dropOffArray;
+
+    public int dropOffNum;
+    GameObject spawned;
+    GameObject boxPrefab;
+    public GameObject box;
+    public GameObject boxSpawn;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         UI.SetActive(false);
         cdstart = false;
+        boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
 
     }
 
@@ -98,7 +107,7 @@ public class PlayerControl : MonoBehaviour
 
         if (carrying == true)
         {
-            pickup.transform.position = transform.position;
+            boxPrefab.transform.position = transform.position;
         }
 
 
@@ -120,7 +129,7 @@ public class PlayerControl : MonoBehaviour
             if (topped == false)
             {
                 topped = true;
-                goal += 1;
+                
             }
             
         }
@@ -131,7 +140,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        
+
         if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space))
         {
 
@@ -143,61 +152,66 @@ public class PlayerControl : MonoBehaviour
                 if (carrying == false)
                 {
                     carrying = true;
-                    Debug.Log(carrying);
+
+                    spawned = GameObject.Instantiate(Dropoff, dropOffArray[goal].transform.position, Quaternion.identity);
+
 
                 }
-
                 else if (carrying == true)
                 {
                     carrying = false;
+
+                    if (spawned != null)
+                    {
+                        GameObject.Destroy(spawned);
+                        Debug.Log("Destroy");
+                    }
+
                 }
 
 
-                
-
-
-
-                
             }
 
-            if (other.tag == "EPlace" && Input.GetKey(KeyCode.Space))
+        }
+
+        
+
+    /*
+    else if (other.tag == "EPlace" && Input.GetKey(KeyCode.Space) && carrying == true)
+    {
+        carrying = false;
+        pickup.transform.position = Dropoff.transform.position;
+        Debug.Log("test");
+    }
+    else if (Input.GetKey(KeyCode.Space) && carrying == true)
+    {
+        carrying = false;
+        Debug.Log("test2");
+    }
+
+    */
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D trig)
+    {
+
+        if (trig.tag == "EPlace" && carrying == true)
+        {
+
+            boxPrefab.transform.position = dropOffArray[goal].transform.position;
+            goal += 1;
+            carrying = false;
+            GameObject.Destroy(spawned);
+            Debug.Log("test");
+            if (goal < 4)
             {
-
-
-                if (cdstart == false)
-                {
-                    cdstart = true;
-
-                    if (carrying == false)
-                    {
-                        carrying = true;
-                        Debug.Log(carrying);
-
-                    }
-
-                    else if (carrying == true)
-                    {
-                        carrying = false;
-                    }
-
-
-
-
-
-
-
-                }
-
-
-
-
+                boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
             }
-
-
-
-
         }
 
 
     }
+
 }
