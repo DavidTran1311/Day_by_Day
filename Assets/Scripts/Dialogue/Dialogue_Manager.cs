@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+
 public class Dialogue_Manager : MonoBehaviour
 {
     [Header("Params")]
@@ -26,6 +27,17 @@ public class Dialogue_Manager : MonoBehaviour
 
     private TextMeshProUGUI[] ChoicesText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip dialogueTypingSoundClip;
+    [Range(1, 10)]
+    [SerializeField] private int frequencyLevel = 8;
+    [SerializeField] private float minPitch = 1f;
+    [Range(1, 4)]
+    [SerializeField] private float maxPitch = 4f;
+    [SerializeField] private bool stopAudioSource;
+
+    private AudioSource audioSource;
+
     public bool DialogueIsPlaying { get; private set; }
 
     private bool canContinueToNextLine = false;
@@ -44,6 +56,8 @@ public class Dialogue_Manager : MonoBehaviour
 
         }
         instance=this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     public static Dialogue_Manager GetInstance()
@@ -127,7 +141,8 @@ public class Dialogue_Manager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = "";
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
 
         continueIcon.SetActive(false);
         HideChoices();
@@ -143,8 +158,8 @@ public class Dialogue_Manager : MonoBehaviour
                 dialogueText.text = line;
                 break;
             }
-
-                dialogueText.text += letter;
+                PlayDialogueSound(dialogueText.maxVisibleCharacters);
+                dialogueText.maxVisibleCharacters++;
                 yield return new WaitForSeconds(typingSpeed);
   
         }
@@ -153,6 +168,20 @@ public class Dialogue_Manager : MonoBehaviour
         DisplayChoices();
 
         canContinueToNextLine = true;
+    }
+
+    private void PlayDialogueSound(int currentDisplayedCharacterCount)
+    {
+        if (currentDisplayedCharacterCount % frequencyLevel == 0)
+        {
+            if (stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            audioSource.volume = 0.1f;
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(dialogueTypingSoundClip);
+        }
     }
 
     private void HideChoices()
