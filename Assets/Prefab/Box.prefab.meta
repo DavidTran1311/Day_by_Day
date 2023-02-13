@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefab/Box.prefab.meta
 guid: 2b5d77e44d03ec842914ef952b3511ba
+========
+guid: cba1ea4c0dd87bb46a942b63413a93d4
+>>>>>>>> f752838d316ceff28f17a3dede3b7d045e55ebe5:Assets/Prefab/FadeFunction.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
