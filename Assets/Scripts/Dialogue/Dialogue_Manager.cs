@@ -154,14 +154,17 @@ public class Dialogue_Manager : MonoBehaviour
             
             if (submitButtonPressedThisFrame)
             {
+                
                 submitButtonPressedThisFrame = false;
                 dialogueText.text = line;
                 break;
+
             }
-                PlayDialogueSound(dialogueText.maxVisibleCharacters);
-                dialogueText.maxVisibleCharacters++;
-                yield return new WaitForSeconds(typingSpeed);
-  
+
+            PlayDialogueSound(dialogueText.maxVisibleCharacters);
+            //dialogueText.maxVisibleCharacters++;
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         continueIcon.SetActive(true);
