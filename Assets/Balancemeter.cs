@@ -32,7 +32,7 @@ public class Balancemeter : MonoBehaviour
     void Update()
     {
 
-        intensity = new Vector2(0, p.transform.position.y - lb.transform.position.y).magnitude *2;
+        intensity = new Vector2(0, p.transform.position.y - lb.transform.position.y).magnitude *1.8f;
 
         initialX = met.transform.position.x;
         //Debug.Log(initialX);

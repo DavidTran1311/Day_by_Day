@@ -77,6 +77,9 @@ public class PlayerControl : MonoBehaviour
                 rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
             }
 
+
+
+
         } else
         {
 
@@ -141,7 +144,7 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
 
-        if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space))
+        if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space)&& lad.off)
         {
 
 
@@ -202,13 +205,13 @@ public class PlayerControl : MonoBehaviour
 
             boxPrefab.transform.position = dropOffArray[goal].transform.position;
             goal += 1;
-            carrying = false;
             GameObject.Destroy(spawned);
             Debug.Log("test");
             if (goal < 4)
             {
                 boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
             }
+            carrying = false;
         }
 
 

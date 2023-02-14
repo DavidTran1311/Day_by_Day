@@ -9,6 +9,7 @@ TagManager:
   - Goal
   - Carryable
   - EPlace
+  - based
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - Top Layer
   - Water
   - UI
-  - 
-  - 
-  - 
+  - FG
+  - BG
+  - FLOOR
   - 
   - 
   - 
@@ -46,8 +47,17 @@ TagManager:
   - name: bg
     uniqueID: 320743227
     locked: 0
+  - name: BG
+    uniqueID: 3100782237
+    locked: 0
+  - name: FLOOR
+    uniqueID: 3075468477
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FG
+    uniqueID: 2208147685
     locked: 0
   - name: Player
     uniqueID: 1976392041

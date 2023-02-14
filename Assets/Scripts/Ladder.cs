@@ -33,8 +33,6 @@ public class Ladder : MonoBehaviour
         cdstart = false;
         cooldown = 0;
 
-        
-
     }
 
     // Update is called once per frame
@@ -100,8 +98,6 @@ public class Ladder : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && col.tag == "Player")
         {
-
-            Debug.Log(cooldown);
 
             if (cooldown == 0)
             {

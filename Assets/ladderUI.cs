@@ -19,7 +19,7 @@ public class ladderUI : MonoBehaviour
     void Update()
     {
 
-        t.text = "Ladder successfully climbed: " + p.goal +  " Times";
+        t.text = "Boxes Stocked: " + p.goal;
 
 
     }
