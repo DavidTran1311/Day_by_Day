@@ -162,7 +162,7 @@ public class Dialogue_Manager : MonoBehaviour
             }
 
             PlayDialogueSound(dialogueText.maxVisibleCharacters);
-            //dialogueText.maxVisibleCharacters++;
+            dialogueText.maxVisibleCharacters++;
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
