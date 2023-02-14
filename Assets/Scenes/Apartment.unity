@@ -6495,7 +6495,7 @@ PrefabInstance:
       objectReference: {fileID: 2082480983}
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: frequencyLevel
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: displayNameText
@@ -6521,6 +6521,22 @@ PrefabInstance:
       propertyPath: dialogueTypingSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: 2c1256bd8052111419ae1e28b8808039, type: 3}
+    - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
+      propertyPath: dialogueTypingSoundClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
+      propertyPath: dialogueTypingSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c1256bd8052111419ae1e28b8808039, type: 3}
+    - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
+      propertyPath: dialogueTypingSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8668417326850bd4d97c0d86efe27ae1, type: 3}
+    - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
+      propertyPath: dialogueTypingSoundClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cb642dc0370b7a458278ff743392544, type: 3}
     - target: {fileID: 6805347878901140818, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: m_RootOrder
       value: 9
