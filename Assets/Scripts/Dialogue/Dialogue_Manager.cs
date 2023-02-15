@@ -11,7 +11,7 @@ public class Dialogue_Manager : MonoBehaviour
     [SerializeField] private float typingSpeed = 0.04f;
 
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] public GameObject dialoguePanel;
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
@@ -83,7 +83,7 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             submitButtonPressedThisFrame = true;
         }
@@ -144,8 +144,8 @@ public class Dialogue_Manager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = line;
-        dialogueText.maxVisibleCharacters = 0;
+        dialogueText.text = "";
+        dialogueText.maxVisibleCharacters = 500;
 
         continueIcon.SetActive(false);
         HideChoices();
@@ -177,10 +177,10 @@ public class Dialogue_Manager : MonoBehaviour
             }
             else
             {
- 
-                dialogueText.maxVisibleCharacters++;
+
+                dialogueText.maxVisibleCharacters += letter;
                 PlayDialogueSound(dialogueText.maxVisibleCharacters);
-                //dialogueText.text += letter;
+                dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
 
@@ -257,7 +257,7 @@ public class Dialogue_Manager : MonoBehaviour
 
             Debug.LogError("more choices were given than ui can support" + currentChoices.Count);
         }
-        int index = 0;
+            int index = 0;
         foreach (Choice choice in currentChoices)
         {
             Choices[index].gameObject.SetActive(true);
@@ -273,22 +273,23 @@ public class Dialogue_Manager : MonoBehaviour
 
         }
     }
+
     private IEnumerator SelectFirstChoice()
-    {
+{
 
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(Choices[0].gameObject);
+    EventSystem.current.SetSelectedGameObject(null);
+    yield return new WaitForEndOfFrame();
+    EventSystem.current.SetSelectedGameObject(Choices[0].gameObject);
+}
+
+public void MakeChoice(int ChoiceIndex)
+{
+
+    if (canContinueToNextLine)
+    {
+        CurrentStory.ChooseChoiceIndex(ChoiceIndex);
+        ContinueStory();
     }
 
-    public void MakeChoice(int ChoiceIndex)
-    {
-
-        if (canContinueToNextLine)
-        {
-            CurrentStory.ChooseChoiceIndex(ChoiceIndex);
-            ContinueStory();
-        }
-
-    }
+}
 }

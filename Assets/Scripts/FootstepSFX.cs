@@ -23,5 +23,15 @@ public class FootstepSFX : MonoBehaviour
         {
             footsies.enabled = false;
         }
+
+        if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
+        {
+            footsies.enabled = false;
+        }
+
+        if (Time.timeScale == 0f)
+        {
+            footsies.enabled = false;
+        }
     }
 }
