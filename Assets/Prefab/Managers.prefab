@@ -53,6 +53,12 @@ MonoBehaviour:
   Choices:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  dialogueTypingSoundClips: []
+  frequencyLevel: 8
+  minPitch: 1
+  maxPitch: 4
+  stopAudioSource: 0
 --- !u!1 &6805347878901140819
 GameObject:
   m_ObjectHideFlags: 0
