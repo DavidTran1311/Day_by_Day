@@ -639,6 +639,7 @@ MonoBehaviour:
   Apartment: Apartment
   TW: TW
   animator: {fileID: 1320183379}
+  StartUI: {fileID: 0}
 --- !u!114 &826536754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,6 +1276,7 @@ MonoBehaviour:
   Apartment: Apartment
   TW: TW
   animator: {fileID: 1320183379}
+  StartUI: {fileID: 0}
 --- !u!1 &1540702639
 GameObject:
   m_ObjectHideFlags: 0
