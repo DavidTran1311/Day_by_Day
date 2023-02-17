@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
-    public string Apartment;
+    public string Apartment, TW;
 
     public Animator animator;
+
+    [SerializeField] private GameObject twPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +21,20 @@ public class MainMenuUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        twPanel.SetActive(false);
     }
 
+    public void OnFadeTW()
+    {
+        Debug.Log("TW Showing");
+        twPanel.SetActive(true);
+    }
+
+    public void OnFadeToTW()
+    {
+        SceneManager.LoadScene(TW);
+    }
+    
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(Apartment);
@@ -30,7 +43,7 @@ public class MainMenuUI : MonoBehaviour
     public void StartGame()
     {
         
-        animator.SetTrigger("StartGameFade");
+        animator.SetTrigger("TriggerWarningScreen");
         //OnFadeComplete();
     }
 
