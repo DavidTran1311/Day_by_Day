@@ -11,7 +11,7 @@ public class MainMenuUI : MonoBehaviour
     public Animator animator;
 
     //[SerializeField] private GameObject twPanel; 
-    [SerializeField] private GameObject StartUI;
+    //[SerializeField] private GameObject StartUI;
 
     // Start is called before the first frame update
     void Start()
