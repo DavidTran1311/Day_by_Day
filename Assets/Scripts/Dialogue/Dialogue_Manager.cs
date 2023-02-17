@@ -1,16 +1,17 @@
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using Ink.Runtime;
+using UnityEngine;
 using UnityEngine.EventSystems;
+
 public class Dialogue_Manager : MonoBehaviour
 {
     [Header("Params")]
     [SerializeField] private float typingSpeed = 0.04f;
-    
+
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] public GameObject dialoguePanel;
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
@@ -26,6 +27,17 @@ public class Dialogue_Manager : MonoBehaviour
 
     private TextMeshProUGUI[] ChoicesText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] dialogueTypingSoundClips;
+    [Range(1, 10)]
+    [SerializeField] private int frequencyLevel = 8;
+    [SerializeField] private float minPitch = 1f;
+    [Range(1, 4)]
+    [SerializeField] private float maxPitch = 4f;
+    [SerializeField] private bool stopAudioSource;
+
+    private AudioSource audioSource;
+
     public bool DialogueIsPlaying { get; private set; }
 
     private bool canContinueToNextLine = false;
@@ -38,28 +50,31 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance!= null)
+        if (instance != null)
         {
             Debug.Log("found more than one");
 
         }
-        instance=this;
+        instance = this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     public static Dialogue_Manager GetInstance()
     {
-        
+
         return instance;
 
     }
     private void Start()
     {
+        Cursor.visible = false;
         DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
         ChoicesText = new TextMeshProUGUI[Choices.Length];
         int index = 0;
-        foreach(GameObject choice in Choices)
+        foreach (GameObject choice in Choices)
         {
             ChoicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
@@ -68,7 +83,7 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             submitButtonPressedThisFrame = true;
         }
@@ -77,21 +92,22 @@ public class Dialogue_Manager : MonoBehaviour
         {
             return;
         }
-        if (canContinueToNextLine && CurrentStory.currentChoices.Count==0 && submitButtonPressedThisFrame)
+        if (canContinueToNextLine && CurrentStory.currentChoices.Count == 0 && submitButtonPressedThisFrame)
         {
             submitButtonPressedThisFrame = false;
             ContinueStory();
         }
     }
-    public void EnterDialogueMode(TextAsset inkJSON) {
+    public void EnterDialogueMode(TextAsset inkJSON)
+    {
         CurrentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
         ContinueStory();
-    
 
-        
+
+
     }
     private void ExitDialogueMode()
     {
@@ -102,7 +118,8 @@ public class Dialogue_Manager : MonoBehaviour
 
     }
 
-    private void ContinueStory() {
+    private void ContinueStory()
+    {
 
         if (CurrentStory.canContinue)
         {
@@ -110,49 +127,87 @@ public class Dialogue_Manager : MonoBehaviour
             {
                 StopCoroutine(displayLineCoroutine);
             }
-            
+
             displayLineCoroutine = StartCoroutine(DisplayLine(CurrentStory.Continue()));
-            
+
 
             //handle tags
             HandleTags(CurrentStory.currentTags);
         }
         else
         {
-            
+
             ExitDialogueMode();
-           
+
         }
     }
 
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
+        dialogueText.maxVisibleCharacters = 500;
 
         continueIcon.SetActive(false);
         HideChoices();
 
         canContinueToNextLine = false;
 
+        bool isAddingRichTextTag = false;
+
         foreach (char letter in line.ToCharArray())
         {
-            
-            if (submitButtonPressedThisFrame)
+
+            if (submitButtonPressedThisFrame == true)
             {
                 submitButtonPressedThisFrame = false;
                 dialogueText.text = line;
                 break;
+
             }
 
+
+            if (letter == '<' || isAddingRichTextTag)
+            {
+                isAddingRichTextTag = true;
+                dialogueText.text += letter;
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false;
+                }
+            }
+            else
+            {
+
+                dialogueText.maxVisibleCharacters += letter;
+                PlayDialogueSound(dialogueText.maxVisibleCharacters);
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
-  
+            }
+
         }
 
         continueIcon.SetActive(true);
         DisplayChoices();
 
         canContinueToNextLine = true;
+    }
+
+    private void PlayDialogueSound(int currentDisplayedCharacterCount)
+    {
+        if (currentDisplayedCharacterCount % frequencyLevel == 0)
+        {
+            if (stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+
+            int randomIndex = Random.Range(0, dialogueTypingSoundClips.Length);
+            AudioClip soundClip = dialogueTypingSoundClips[randomIndex];
+
+            audioSource.volume = 0.1f;
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(soundClip);
+        }
     }
 
     private void HideChoices()
@@ -193,15 +248,17 @@ public class Dialogue_Manager : MonoBehaviour
         }
     }
 
-    private void DisplayChoices() {
+    private void DisplayChoices()
+    {
 
         List<Choice> currentChoices = CurrentStory.currentChoices;
-        if (currentChoices.Count > Choices.Length) {
+        if (currentChoices.Count > Choices.Length)
+        {
 
-            Debug.LogError("more choices were given than ui can support"+ currentChoices.Count);
+            Debug.LogError("more choices were given than ui can support" + currentChoices.Count);
         }
-        int index = 0;
-        foreach(Choice choice in currentChoices)
+            int index = 0;
+        foreach (Choice choice in currentChoices)
         {
             Choices[index].gameObject.SetActive(true);
             ChoicesText[index].text = choice.text;
@@ -210,26 +267,29 @@ public class Dialogue_Manager : MonoBehaviour
             StartCoroutine(SelectFirstChoice());
         }
 
-        for(int i = index; i < Choices.Length; i++)
+        for (int i = index; i < Choices.Length; i++)
         {
             Choices[i].gameObject.SetActive(false);
 
         }
     }
-    private IEnumerator SelectFirstChoice() {
 
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(Choices[0].gameObject);
+    private IEnumerator SelectFirstChoice()
+{
+
+    EventSystem.current.SetSelectedGameObject(null);
+    yield return new WaitForEndOfFrame();
+    EventSystem.current.SetSelectedGameObject(Choices[0].gameObject);
+}
+
+public void MakeChoice(int ChoiceIndex)
+{
+
+    if (canContinueToNextLine)
+    {
+        CurrentStory.ChooseChoiceIndex(ChoiceIndex);
+        ContinueStory();
     }
 
-    public void MakeChoice(int ChoiceIndex) {
-
-        if (canContinueToNextLine)
-        {
-            CurrentStory.ChooseChoiceIndex(ChoiceIndex);
-            ContinueStory();
-        }
-
-    }
+}
 }

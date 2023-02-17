@@ -41,7 +41,7 @@ public class OtherUI : MonoBehaviour
 
     public void GameOverScreen()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             summaryBG.SetActive(false);
             gameOverPanel.SetActive(true);

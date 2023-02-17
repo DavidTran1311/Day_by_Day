@@ -37,7 +37,7 @@ public class NewspaperTrigger : MonoBehaviour
             visualCue.SetActive(false);
         }
 
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.Space))
         {
             newspaperPanel.SetActive(false);
             Time.timeScale = 1f;
