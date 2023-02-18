@@ -14,6 +14,8 @@ public class PlayerControl : MonoBehaviour
     public int goal;
     public bool topped = false;
     public GameObject UI;
+    bool stationaryX;
+    bool stationaryY;
 
     float cooldown;
     bool cdstart;
@@ -28,6 +30,8 @@ public class PlayerControl : MonoBehaviour
     GameObject boxPrefab;
     public GameObject box;
     public GameObject boxSpawn;
+
+    public GameObject end;
     
 
     // Start is called before the first frame update
@@ -36,6 +40,7 @@ public class PlayerControl : MonoBehaviour
         UI.SetActive(false);
         cdstart = false;
         boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
+        end.SetActive(false);
 
     }
 
@@ -54,10 +59,24 @@ public class PlayerControl : MonoBehaviour
         Movement.y = Input.GetAxisRaw("Vertical");
         anim.SetFloat("Hor", Movement.x);
         anim.SetFloat("Vert", Movement.y);
+        anim.SetBool("stationaryX", stationaryX);
+        anim.SetBool("stationaryY", stationaryY);
+        anim.SetBool("isCarrying", carrying);
 
 
         if (lad.off)
         {
+
+            Debug.Log(stationaryY);
+
+            if (Movement.x > 0)
+            {
+                transform.localScale = new Vector3( -1, 1, 1);
+            } else if (Movement.x < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+
 
             anim.SetBool("isLadder", false);
             //UI.SetActive(false);
@@ -71,20 +90,25 @@ public class PlayerControl : MonoBehaviour
             if (Movement.x != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
-                
-            }
+                stationaryX = false;
 
+
+            } else
+            {
+                stationaryX = true;
+            }
 
             if (Movement.y != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
+                stationaryY = false;
+            } else
+            {
+                stationaryY = true;
             }
 
 
-
-
-        } else
-        {
+        } else {
 
             anim.SetBool("isLadder", true);
             UI.SetActive(true);
@@ -92,7 +116,10 @@ public class PlayerControl : MonoBehaviour
             if (Movement.y != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed/6 * Time.deltaTime));
-
+                stationaryY = false;
+            } else
+            {
+                stationaryY = true;
             }
         }
 
@@ -210,9 +237,12 @@ public class PlayerControl : MonoBehaviour
             goal += 1;
             GameObject.Destroy(spawned);
             Debug.Log("test");
-            if (goal < 4)
+            if (goal < dropOffArray.Length)
             {
                 boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
+            } else
+            {
+                end.SetActive(true);
             }
             carrying = false;
         }

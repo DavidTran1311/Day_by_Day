@@ -66,7 +66,7 @@ public class Ladder : MonoBehaviour
             //sr.color = Color.blue;
             bc.offset = new Vector2(-0.06f, 1f);
             meter.transform.position = new Vector2(-100, 100);
-            pc.goal = 0;
+            //pc.goal = 0;
             if (pc.topped == true)
             {
                 pc.topped = false;

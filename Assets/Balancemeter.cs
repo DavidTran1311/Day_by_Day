@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Balancemeter : MonoBehaviour
 {
@@ -53,12 +54,12 @@ public class Balancemeter : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 rb.AddForce(new Vector2(bForce * intensity * 2, 0), ForceMode2D.Force);
                 //Debug.Log("Right");
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 rb.AddForce(new Vector2(-bForce * intensity * 2, 0), ForceMode2D.Force);
                 //Debug.Log("Left");
@@ -80,6 +81,12 @@ public class Balancemeter : MonoBehaviour
             {
                 fall = true;
                 fallCount += 1;
+
+                if (fallCount >= 3)
+                {
+                    //TELEPORTS PLAYER TO HOSPITAL SCENE AFTER 3 FALLS
+                    SceneManager.LoadScene("HospitalER");
+                }
             }
 
         }

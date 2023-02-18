@@ -68,7 +68,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -131,9 +131,9 @@ TextureImporter:
         x: 16
         y: 224
         width: 16
-        height: 22
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -424,7 +424,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 96
-        width: 31
+        width: 16
         height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -721,7 +721,7 @@ TextureImporter:
         width: 16
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,9 +740,9 @@ TextureImporter:
         x: 48
         y: 224
         width: 16
-        height: 22
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -750,6 +750,27 @@ TextureImporter:
       bones: []
       spriteID: 1ba5238c39ac5fe4d892025965b4e378
       internalID: -1442771703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animations-mrdavis_2.0-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603287a9e3ebfef44933c99eee5df899
+      internalID: -1014910406
       vertices: []
       indices: 
       edges: []
@@ -790,6 +811,7 @@ TextureImporter:
       animations-mrdavis_2.0-Sheet_16: 89522536
       animations-mrdavis_2.0-Sheet_19: 1782680695
       animations-mrdavis_2.0-Sheet_9: -315953653
+      animations-mrdavis_2.0-Sheet_31: -1014910406
       animations-mrdavis_2.0-Sheet_27: 205688312
       animations-mrdavis_2.0-Sheet_5: 305076864
       animations-mrdavis_2.0-Sheet_28: 1564893258
