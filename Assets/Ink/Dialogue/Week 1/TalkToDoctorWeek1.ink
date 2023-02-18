@@ -1,84 +1,92 @@
-Dr. Yang?
-Oh, Mr. and Mrs. Davis.
-My wife says that George's condition isn't looking too good.
-I thought you said he was on the way to getting better.
-Yes, I said that.
-However, things change.
-What's going on?
-And please explain in a way I can understand.
-George's body just isn't reacting to the treatment as expected.
-We have to consider other options.
-So, what are the options?
-Right now, as you know, we've been giving him chemotherapy.
-But, it's not going accoring to plan.
-Other treatments would be targeted therapy, radiation therapy, and stem cell transplant.
-Stem cell transplants can be very costly...
-...so we're going to try our best to avoid having to even consider it.
-What are the other ones?
-Targeted therapy uses drugs to specifically target a type of gene or protein within the cancer cell.
-It doesn't affect the healthy cells like with chemo or radiation.
-Radiation therapy uses high-energy rays to destroy the cancer cells it it has spread to the head.
-But, like I said, it can affect healthy cells as well.
-+ Why didn't you try these things in the first place?
+Dr. Yang? #speaker:Mr. Davis #portrait:davis_neutral
+Oh, Mr. and Mrs. Davis. # speaker:Dr. Yang #portrait:drYang_neutral
+My wife says that George's condition isn't looking too good. #speaker:Mr. Davis #portrait:davis_neutral
+I thought you said he was on the way to getting better. #speaker:Mr. Davis #portrait:davis_neutral
+ Yes, I said that. # speaker:Dr. Yang #portrait:drYang_neutral
+However, things change. # speaker:Dr. Yang #portrait:drYang_neutral
+What's going on? #speaker:Mr. Davis #portrait:davis_neutral
+And please explain in a way I can understand. #speaker:Mr. Davis #portrait:davis_neutral
+George's body just isn't reacting to the treatment as expected. # speaker:Dr. Yang #portrait:drYang_neutral
+We have to consider other options. # speaker:Dr. Yang #portrait:drYang_neutral
+So, what are the options? #speaker:Lily #portrait:lily_neutral
+Right now, as you know, we've been giving him chemotherapy. # speaker:Dr. Yang #portrait:drYang_neutral
+But, it's not going accoring to plan. # speaker:Dr. Yang #portrait:drYang_neutral
+Other treatments would be targeted therapy, radiation therapy, and stem cell transplant. # speaker:Dr. Yang #portrait:drYang_neutral
+Stem cell transplants can be very costly... # speaker:Dr. Yang #portrait:drYang_neutral
+...so we're going to try our best to avoid having to even consider it. # speaker:Dr. Yang #portrait:drYang_neutral
+What are the other ones? #speaker:Lily #portrait:lily_neutral
+Targeted therapy uses drugs to specifically target a type of gene or protein within the cancer cell. # speaker:Dr. Yang #portrait:drYang_neutral
+It doesn't affect the healthy cells like with chemo or radiation. # speaker:Dr. Yang #portrait:drYang_neutral
+Radiation therapy uses high-energy rays to destroy the cancer cells it it has spread to the head. # speaker:Dr. Yang #portrait:drYang_neutral
+But, like I said, it can affect healthy cells as well. # speaker:Dr. Yang #portrait:drYang_neutral
++ Why didn't you try these things in the first place? #speaker:Mr. Davis #portrait:davis_neutral
  -> notThatSimple
-+ So, do them! Do the treatments!
++ So, do them! Do the treatments! #speaker:Mr. Davis #portrait:davis_neutral
  -> notThatSimple
  
  === notThatSimple ===
-It's not that simple.
-It all depends on the type of leukemia and his overall needs and condition.
-George has Acute Lymphoblastic Leukemia, ALL for short.
-We have to consider a lot of things before we decide on a treatment for him.
-The targeted therapy treatment only work if the cells have the protein or gene attached to it.
-We'd have to conduct special tests to figure out if it's present at all.
-Even then, the treatment might not even work.
-Radiation is only put in place when the cancer has spread to the head.
-It's also quite dangerous for George because he's so young.
-His brain is still in development. The radiation will affect his head if he undergoes this treatment.
-But, of course, there's stem cell transplants, anot they're quite risky.
-It's not the ideal option, but it is a possibility.
+It's not that simple. # speaker:Dr. Yang #portrait:drYang_neutral
+It all depends on the type of leukemia and his overall needs and condition. # speaker:Dr. Yang #portrait:drYang_neutral
+George has Acute Lymphoblastic Leukemia, ALL for short. # speaker:Dr. Yang #portrait:drYang_neutral
+We have to consider a lot of things before we decide on a treatment for him. # speaker:Dr. Yang #portrait:drYang_neutral
+The targeted therapy treatment only work if the cells have the protein or gene attached to it. # speaker:Dr. Yang #portrait:drYang_neutral
+We'd have to conduct special tests to figure out if it's present at all. # speaker:Dr. Yang #portrait:drYang_neutral
+Even then, the treatment might not even work. # speaker:Dr. Yang #portrait:drYang_neutral
+Radiation is only put in place when the cancer has spread to the head. # speaker:Dr. Yang #portrait:drYang_neutral
+It's also quite dangerous for George because he's so young. # speaker:Dr. Yang #portrait:drYang_neutral
+His brain is still in development. The radiation will affect his head if he undergoes this treatment. # speaker:Dr. Yang #portrait:drYang_neutral
+But, of course, there's stem cell transplants, anot they're quite risky. # speaker:Dr. Yang #portrait:drYang_neutral
+It's not the ideal option, but it is a possibility. # speaker:Dr. Yang #portrait:drYang_neutral
 
-So, you're telling us that there's no other option besides chemo?
-+ It can't be the only thing!
-There must be something you can do.
-Chemo isn't working and you're telling me that these other options can't even be done?
+So, you're telling us that there's no other option besides chemo? #speaker:Lily #portrait:lily_neutral
++ It can't be the only thing! #speaker:Mr. Davis #portrait:davis_neutral
+There must be something you can do. #speaker:Mr. Davis #portrait:davis_neutral
+Chemo isn't working and you're telling me that these other options can't even be done? #speaker:Mr. Davis #portrait:davis_neutral
  -> saveOurKid
-+ This is unbelievable.
-There must be something you can do.
++ This is unbelievable. #speaker:Mr. Davis #portrait:davis_neutral
+There must be something you can do. #speaker:Mr. Davis #portrait:davis_neutral
  -> saveOurKid
-+ ...
-Come on! There must be something you can do!
++ ... #speaker:Mr. Davis #portrait:davis_neutral
+Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutral
  -> saveOurKid
  
  === saveOurKid ===
- Please!
- Save our son!
- + Do something! Anything!
+ Please! #speaker:Lily #portrait:lily_neutral
+ Save our son! #speaker:Lily #portrait:lily_neutral
+ + Do something! Anything! #speaker:Mr. Davis #portrait:davis_neutral
  -> look
- + You have to treat him.
+ + You have to treat him. #speaker:Mr. Davis #portrait:davis_neutral
  -> look
  
  === look ===
- We have.
- And we will.
- We'll do whatever we can to help your son.
- In the meantime, spend whatever time you have with your son.
- He's in a fragile state right now, and a parent's support is always helpful.
+ We have. # speaker:Dr. Yang #portrait:drYang_neutral
+ And we will. # speaker:Dr. Yang #portrait:drYang_neutral
+ We'll do whatever we can to help your son. # speaker:Dr. Yang #portrait:drYang_neutral
+ In the meantime, spend whatever time you have with your son. # speaker:Dr. Yang #portrait:drYang_neutral
+ He's in a fragile state right now, and a parent's support is always helpful. # speaker:Dr. Yang #portrait:drYang_neutral
+ 
+ ...sigh... #speaker:Mr. Davis #portrait:davis_neutral
+ ...okay. Thank you, Dr, Yang. #speaker:Mr. Davis #portrait:davis_neutral
+ 
+ ... #speaker:Mr. Davis #portrait:davis_neutral
+ ... #speaker:Mr. Davis #portrait:davis_neutral
+ It's me. #speaker:Lily #portrait:lily_neutral
+ So, what are we going to do? #speaker:Mr. Davis #portrait:davis_neutral
+ ...I don't know. #speaker:Lily #portrait:lily_neutral
+ But you can start by coming to visit George in the hospital. #speaker:Lily #portrait:lily_neutral
+ + Yes, yes, I will! #speaker:Mr. Davis #portrait:davis_neutral
+  -> justMakingSure
+ + Alright, I will, stop badgering me about it. #speaker:Mr. Davis #portrait:davis_neutral
+  -> justMakingSure
+ + ... #speaker:Mr. Davis #portrait:davis_neutral
+  -> justMakingSure
+  
+  === justMakingSure ===
+  I'm just making sure that you're going to come next week. #speaker:Lily #portrait:lily_neutral
+  ... #speaker:Lily #portrait:lily_neutral
+  Okay. I'm gonna go back to George. #speaker:Lily #portrait:lily_neutral
+  I'll see you. #speaker:Lily #portrait:lily_neutral
+  Bye. #speaker:Mr. Davis #portrait:davis_neutral
+ 
  -> END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 

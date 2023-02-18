@@ -9,6 +9,7 @@ public class RoomSwap : MonoBehaviour
     [SerializeField] private GameObject visualE;
     public string LadderMinigame;
     public string Apartment;
+    public string DoctorsOffice;
     public float inRange;
 
     void Start()
@@ -61,6 +62,18 @@ public class RoomSwap : MonoBehaviour
     public void LoadHome()
     {
         SceneManager.LoadScene("Apartment");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadDoctor()
+    {
+        SceneManager.LoadScene("DoctorsOffice");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadEndScene()
+    {
+        SceneManager.LoadScene("EndScreen");
         Time.timeScale = 1f;
     }
 

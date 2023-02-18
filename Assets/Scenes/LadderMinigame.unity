@@ -4719,8 +4719,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1670330584}
-  visualE: {fileID: 0}
-  instructionPanel: {fileID: 0}
+  visualE: {fileID: 413509290}
+  instructionPanel: {fileID: 49682388}
 --- !u!4 &1147259925
 Transform:
   m_ObjectHideFlags: 0

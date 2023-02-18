@@ -23,21 +23,18 @@ public class PopUpQuestion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            MainPopUp();
-        }
+
     }
 
     public void LoadHospital()
     {
-        SceneManager.LoadScene("HospitalER");
+        SceneManager.LoadScene("GeorgeHospitalRoom");
         Time.timeScale = 1f;
     }
 
     public void LoadHome()
     {
-        SceneManager.LoadScene("Apartment");
+        SceneManager.LoadScene("ApartmentWeekEnd");
         Time.timeScale = 1f;
     }
 
@@ -59,6 +56,12 @@ public class PopUpQuestion : MonoBehaviour
         AreYouSureHome.SetActive(false);
         popUpHospital.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void LoadEndScreen()
+    {
+        SceneManager.LoadScene("EndScreen");
+            Time.timeScale = 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
