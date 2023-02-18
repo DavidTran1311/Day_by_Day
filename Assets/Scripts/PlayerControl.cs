@@ -52,6 +52,8 @@ public class PlayerControl : MonoBehaviour
 
         Movement.x = Input.GetAxisRaw("Horizontal");
         Movement.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Hor", Movement.x);
+        anim.SetFloat("Vert", Movement.y);
 
 
         if (lad.off)
@@ -69,6 +71,7 @@ public class PlayerControl : MonoBehaviour
             if (Movement.x != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
+                
             }
 
 
