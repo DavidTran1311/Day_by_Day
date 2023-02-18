@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LadderMinigame.unity
     guid: 7183c2a6a35b75440a47ca4cd420ec9f
   - enabled: 1
-    path: Assets/Scenes/HospitalER.unity
+    path: Assets/Scenes/HospitalERROR.unity
     guid: ab0c7ffc99543ee4fa0e8ae1247bf3b0
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity

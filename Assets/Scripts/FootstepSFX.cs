@@ -28,10 +28,18 @@ public class FootstepSFX : MonoBehaviour
         {
             footsies.enabled = false;
         }
+        else
+        {
+            footsies.enabled = true;
+        }
 
         if (Time.timeScale == 0f)
         {
             footsies.enabled = false;
+        }
+        else
+        {
+            footsies.enabled = true;
         }
     }
 }

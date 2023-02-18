@@ -8,6 +8,7 @@ public class RoomSwap : MonoBehaviour
     [SerializeField] private GameObject visualCue;
     [SerializeField] private GameObject visualE;
     public string LadderMinigame;
+    public string Apartment;
     public float inRange;
 
     void Start()
@@ -54,6 +55,12 @@ public class RoomSwap : MonoBehaviour
     public void LoadLadderMinigame()
     {
     SceneManager.LoadScene("LadderMinigame");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadHome()
+    {
+        SceneManager.LoadScene("Apartment");
         Time.timeScale = 1f;
     }
 
