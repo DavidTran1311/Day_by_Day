@@ -68,24 +68,4 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
  ...sigh... #speaker:Mr. Davis #portrait:davis_neutral
  ...okay. Thank you, Dr, Yang. #speaker:Mr. Davis #portrait:davis_neutral
  
- ... #speaker:Mr. Davis #portrait:davis_neutral
- ... #speaker:Mr. Davis #portrait:davis_neutral
- It's me. #speaker:Lily #portrait:lily_neutral
- So, what are we going to do? #speaker:Mr. Davis #portrait:davis_neutral
- ...I don't know. #speaker:Lily #portrait:lily_neutral
- But you can start by coming to visit George in the hospital. #speaker:Lily #portrait:lily_neutral
- + Yes, yes, I will! #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
- + Alright, I will, stop badgering me about it. #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
- + ... #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
-  
-  === justMakingSure ===
-  I'm just making sure that you're going to come next week. #speaker:Lily #portrait:lily_neutral
-  ... #speaker:Lily #portrait:lily_neutral
-  Okay. I'm gonna go back to George. #speaker:Lily #portrait:lily_neutral
-  I'll see you. #speaker:Lily #portrait:lily_neutral
-  Bye. #speaker:Mr. Davis #portrait:davis_neutral
- 
  -> END
