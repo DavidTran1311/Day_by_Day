@@ -9967,6 +9967,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2304494052097039834, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -136337335, guid: d0d06a8a67ae8844ba190621965b6287, type: 3}
+    - target: {fileID: 2304494052097039835, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304494052097039835, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304494052097039835, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304494052097039835, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2304494052298882305, guid: d113e7f1dc1ad3d40a2c2b24d309c92f, type: 3}
       propertyPath: m_RootOrder
       value: 3

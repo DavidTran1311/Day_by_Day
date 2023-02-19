@@ -1120,7 +1120,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1446852856}
         m_TargetAssemblyTypeName: OtherUI, Assembly-CSharp
-        m_MethodName: GameOverScreen
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -39,6 +39,13 @@ public class OtherUI : MonoBehaviour
         SceneManager.LoadScene(Menu);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+
+        Debug.Log("Quit");
+    }
+
     public void GameOverScreen()
     {
         if (Input.GetKeyDown(KeyCode.Space))
