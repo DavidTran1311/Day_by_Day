@@ -61,7 +61,7 @@ public class RoomSwap : MonoBehaviour
 
     public void LoadHome()
     {
-        SceneManager.LoadScene("Apartment");
+        SceneManager.LoadScene("ApartmentWeekEnd");
         Time.timeScale = 1f;
     }
 

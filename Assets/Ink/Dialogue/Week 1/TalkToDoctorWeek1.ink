@@ -35,7 +35,7 @@ Even then, the treatment might not even work. # speaker:Dr. Yang #portrait:drYan
 Radiation is only put in place when the cancer has spread to the head. # speaker:Dr. Yang #portrait:drYang_neutral
 It's also quite dangerous for George because he's so young. # speaker:Dr. Yang #portrait:drYang_neutral
 His brain is still in development. The radiation will affect his head if he undergoes this treatment. # speaker:Dr. Yang #portrait:drYang_neutral
-But, of course, there's stem cell transplants, anot they're quite risky. # speaker:Dr. Yang #portrait:drYang_neutral
+But, of course, there's stem cell transplants, but they're quite risky. # speaker:Dr. Yang #portrait:drYang_neutral
 It's not the ideal option, but it is a possibility. # speaker:Dr. Yang #portrait:drYang_neutral
 
 So, you're telling us that there's no other option besides chemo? #speaker:Lily #portrait:lily_neutral
@@ -64,29 +64,6 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
  We'll do whatever we can to help your son. # speaker:Dr. Yang #portrait:drYang_neutral
  In the meantime, spend whatever time you have with your son. # speaker:Dr. Yang #portrait:drYang_neutral
  He's in a fragile state right now, and a parent's support is always helpful. # speaker:Dr. Yang #portrait:drYang_neutral
- 
- ...sigh... #speaker:Mr. Davis #portrait:davis_neutral
- ...okay. Thank you, Dr, Yang. #speaker:Mr. Davis #portrait:davis_neutral
- 
- ... #speaker:Mr. Davis #portrait:davis_neutral
- ... #speaker:Mr. Davis #portrait:davis_neutral
- It's me. #speaker:Lily #portrait:lily_neutral
- So, what are we going to do? #speaker:Mr. Davis #portrait:davis_neutral
- ...I don't know. #speaker:Lily #portrait:lily_neutral
- But you can start by coming to visit George in the hospital. #speaker:Lily #portrait:lily_neutral
- + Yes, yes, I will! #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
- + Alright, I will, stop badgering me about it. #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
- + ... #speaker:Mr. Davis #portrait:davis_neutral
-  -> justMakingSure
-  
-  === justMakingSure ===
-  I'm just making sure that you're going to come next week. #speaker:Lily #portrait:lily_neutral
-  ... #speaker:Lily #portrait:lily_neutral
-  Okay. I'm gonna go back to George. #speaker:Lily #portrait:lily_neutral
-  I'll see you. #speaker:Lily #portrait:lily_neutral
-  Bye. #speaker:Mr. Davis #portrait:davis_neutral
  
  -> END
  

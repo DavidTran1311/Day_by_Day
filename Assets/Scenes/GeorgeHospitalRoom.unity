@@ -2359,6 +2359,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DeactivateOverlay
       objectReference: {fileID: 0}
+    - target: {fileID: 1837251363607004061, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1837251364412071166, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2453,7 +2457,11 @@ PrefabInstance:
       objectReference: {fileID: 346239286}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadHome
+      value: LoadDoctor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837251364953406694, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_text
@@ -2466,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 1837251365151170162, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -239
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837251365377586920, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365377586926, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_text

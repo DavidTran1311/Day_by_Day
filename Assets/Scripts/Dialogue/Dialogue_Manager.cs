@@ -68,7 +68,7 @@ public class Dialogue_Manager : MonoBehaviour
     }
     private void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
         DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 

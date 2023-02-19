@@ -19,7 +19,7 @@ Which is exactly what we need! # speaker: Avery
 
 Is it really though, Avery? # speaker: Jordan
 
-Are you kidding? The quality of our current system is terrble! The wait times are rediculous. # speaker: Avery  
+Are you kidding? The quality of our current system is terrble! The wait times are ridiculous. # speaker: Avery  
 
 I don't even remember the last time I was able to book an appointment in the same week! # speaker: Avery
 

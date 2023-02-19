@@ -342,6 +342,7 @@ MonoBehaviour:
   visualE: {fileID: 1822280119}
   LadderMinigame: LadderMinigame
   Apartment: Apartment
+  DoctorsOffice: 
   inRange: 0
 --- !u!61 &346239287
 BoxCollider2D:
@@ -4236,11 +4237,23 @@ PrefabInstance:
       objectReference: {fileID: 346239286}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadHome
+      value: LoadLadderMinigame
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_text
-      value: Would you like to go to home?
+      value: Go back to work?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837251365151170162, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -164
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837251365151170162, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -159
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
