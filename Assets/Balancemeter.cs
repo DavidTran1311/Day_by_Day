@@ -86,6 +86,7 @@ public class Balancemeter : MonoBehaviour
                 if (fallCount >= 3)
                 {
                     //TELEPORTS PLAYER TO HOSPITAL SCENE AFTER 3 FALLS
+                    //THERE WILL BE A COOL CUSTSCENE HERE
                     SceneManager.LoadScene("HospitalER");
                 }
             }

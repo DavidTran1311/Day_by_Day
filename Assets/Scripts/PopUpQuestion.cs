@@ -10,6 +10,7 @@ public class PopUpQuestion : MonoBehaviour
     [SerializeField] private GameObject popUpHospital;
     [SerializeField] private GameObject AreYouSureHospital;
     [SerializeField] private GameObject AreYouSureHome;
+    [SerializeField] private GameObject popUpCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PopUpQuestion : MonoBehaviour
         popUpHospital.SetActive(false);
         AreYouSureHome.SetActive(false);
         AreYouSureHospital.SetActive(false);
+        popUpCanvas.SetActive(false);
         Cursor.visible = true;
     }
 
@@ -52,6 +54,7 @@ public class PopUpQuestion : MonoBehaviour
 
     public void MainPopUp()
     {
+        popUpCanvas.SetActive(true);
         AreYouSureHospital.SetActive(false);
         AreYouSureHome.SetActive(false);
         popUpHospital.SetActive(true);
@@ -77,6 +80,7 @@ public class PopUpQuestion : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             popUpHospital.SetActive(false);
+            popUpCanvas.SetActive(false);
             Time.timeScale = 1f;
         }
     }
