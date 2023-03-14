@@ -111,7 +111,11 @@ public class PlayerControl : MonoBehaviour
         } else {
 
             anim.SetBool("isLadder", true);
-            UI.SetActive(true);
+            if (goal < dropOffArray.Length)
+            {
+                UI.SetActive(true);
+            }
+                
 
             if (Movement.y != 0)
             {
@@ -243,6 +247,7 @@ public class PlayerControl : MonoBehaviour
             } else
             {
                 end.SetActive(true);
+                UI.SetActive(false);
             }
             carrying = false;
         }

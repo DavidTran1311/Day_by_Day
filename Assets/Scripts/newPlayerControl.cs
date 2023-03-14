@@ -11,6 +11,10 @@ public class newPlayerControl : MonoBehaviour
     public Animator anim;
     bool stationaryX;
     bool stationaryY;
+    public GameObject eNews;
+    public GameObject eDoor;
+    public GameObject eNPC;
+    public GameObject eAlex;
 
 
 
@@ -41,33 +45,50 @@ public class newPlayerControl : MonoBehaviour
         if (Movement.x > 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+            eNews.transform.localScale = new Vector3(-1, 1, 1);
+            eDoor.transform.localScale = new Vector3(-1, 1, 1);
+            eNPC.transform.localScale = new Vector3(-1, 1, 1);
+            eAlex.transform.localScale = new Vector3(-1, 1, 1);
+
         }
         else if (Movement.x < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+            eNews.transform.localScale = new Vector3(1, 1, 1);
+            eDoor.transform.localScale = new Vector3(1, 1, 1);
+            eNPC.transform.localScale = new Vector3(1, 1, 1);
+            eAlex.transform.localScale = new Vector3(1, 1, 1);
         }
 
 
-        if (Movement.x != 0)
+        if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
-            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
-            stationaryX = false;
-            Debug.Log("true");
-
-        }
-        else
-        {
-            stationaryX = true;
-        }
-
-        if (Movement.y != 0)
-        {
-            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
-            stationaryY = false;
+            Time.timeScale = 1f;
+            return;
         }
         else
         {
-            stationaryY = true;
+            if (Movement.x != 0)
+            {
+                rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
+                stationaryX = false;
+                Debug.Log("true");
+
+            }
+            else
+            {
+                stationaryX = true;
+            }
+
+            if (Movement.y != 0)
+            {
+                rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
+                stationaryY = false;
+            }
+            else
+            {
+                stationaryY = true;
+            }
         }
 
 
