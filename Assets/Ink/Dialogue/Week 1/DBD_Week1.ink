@@ -23,22 +23,54 @@ Not at all. #speaker:Lily #portrait: lily_neutral
     sigh... #speaker:Lily #portrait: lily_neutral
     Look, I don't want to talk about it. #speaker:Lily #portrait: lily_neutral
     -> dropit
+* I can tell you're hiding something.
+    ...
+    I'm just worried about George.
+    -> worried
+    
+=== worried ===
+* What are you worried about?
+    Money.
+    We don't have enough of it.
+    How can we take care of our son?
+    What's going to happen if we can't keep him in the hospital?
+    -> happenToGeorge
+* What about George?
+    There's not enough money to keep him at the hospital.
+    What's going to happen to him?
+    -> happenToGeorge
+*...
+    We have to make sure he can stay at the hospital.
+    We need more money.
+    What'll happen to him if we can't pay?
+    -> happenToGeorge
     
 === dropit ===
 Just drop it. #speaker:Lily #portrait: lily_neutral
+* I will. After you tell me what's wrong.
+    ...you're so irritating.
+    ..sigh...
+    I'm just worried about George.
+    -> worried
 * ... #speaker:Mr. Davis #portrait: davis_neutral
-    -> haveSome
+    -> haveSomeMore
 * Fine. #speaker:Mr. Davis #portrait: davis_neutral
 ...sigh... #speaker:Lily #portrait: lily_neutral
-    -> haveSome
+    -> haveSomeMore
 
 === wrong ===
 Nothing's wrong. #speaker:Lily #portrait: lily_neutral
+* There's gotta be something wrong.
+    Would you just drop it?
+    Tell me and I will!
+    ..sigh...
+    I'm just worried about George.
+    -> worried
 * Are you sure?
     Yes! #speaker:Lily #portrait: lily_neutral
     -> stopAsking
 * Alright... #speaker:Mr. Davis #portrait: davis_neutral
-    -> haveSome
+    -> haveSomeMore
     
 === stopAsking ===
 Can you please stop asking? #speaker:Lily #portrait: lily_neutral
@@ -46,18 +78,92 @@ Can you please stop asking? #speaker:Lily #portrait: lily_neutral
     -> feeling
 * ...Fine. #speaker:Mr. Davis #portrait: davis_neutral
     Okay... #speaker:Lily #portrait: lily_neutral
-    -> haveSome
+    -> haveSomeMore
     
 === feeling ===
 I just don't want to talk about it right now! Okay? #speaker:Lily #portrait: lily_neutral
+* You gotta tell me.
+    GOD! You're so irritating!
+    Just tell me and I'll stop asking.
+    ...
+    I- I'm just worried about George.
+    -> worried
 * Okay. #speaker:Mr. Davis #portrait: davis_neutral
     Thank you. #speaker:Lily #portrait: lily_neutral
     ...sigh... #speaker:Lily #portrait: lily_neutral
-    -> haveSome
+    -> haveSomeMore
 * ...alright. #speaker:Mr. Davis #portrait: davis_neutral
     ...sigh... #speaker:Lily #portrait: lily_neutral
-    -> haveSome
+    -> haveSomeMore
+    
+=== happenToGeorge ===
+Nothing's going to happen to him.
+Stop worrying.
+My work'll take care of the bills.
+What if they stop?
+Things can change.
+I heard on the news that there's going to be a new Secretary of Health.
+What if that changes everything?
+Also, you're not exactly like you were when you were twenty, you know.
+Fall over and you're in the hospital.
+God help me if my son AND my husband are in the hospital.
+* If you're that worried then do something about it.
+    Nothing's going to happen.
+    Nothing's going to happen?
+    You're kidding.
+    Did you forget that we live in America??
+    There is nothing calm about this country.
+    There is always something about to happen.
+    I can't do anything about it!
+    I don't even have a job!
+    And I've got George AND Alex to take care of.
+    -> getAJob
+    
+* You worry too much.
+    Nothing's going to happen.
+    Nothing's going to happen?
+    You're kidding.
+    Did you forget that we live in America??
+    There is nothing calm about this country.
+    There is always something about to happen.
+    We can't afford to not worry.
+    We've got George AND Alex to take care of.
+    And I can't even earn my own money to provide for them.
+    ->getAJob
+* ...
+    Don't think I've forgotten about Alex.
+    I don't have a job.
+    What can I do if you get injured?
+    Alex and I...
+    Well, there's not much I can do.
+    This is America.
+    Nobody's going to give a shit about us.
+    Nobody's going to care that we have two sons to worry about.
+    They're all worrying about their kids!
+    -> getAJob
 
+=== getAJob ===
+* Then get a job.
+    Umm.. taking care of our two sons is a job.
+    That's not a very helpful thing to say, dear husband.
+    ...
+    Look, I don't want to talk anymore.
+    I have to go to the hospital to see George.
+    You have to go to work.
+    ...
+    -> END
+    
+* I'll help you find a job.
+    Well, that's nice and all, but taking care of our two sons is enough work.
+    One's in the hospital and neither of them can take care of themselves.
+    I can't leave them alone.
+    ...
+    I'm going to the hospital soon to see George and you've gotta go to work.
+     
+    We'll talk later.
+    Okay..
+    -> END
+    
 === silence1 ===
 Good morning. #speaker:Lily #portrait: lily_neutral
 * ... #speaker:Mr. Davis #portrait: davis_neutral
@@ -66,206 +172,62 @@ Good morning. #speaker:Lily #portrait: lily_neutral
     -> haveSome
     
 === haveSome ===
-I made breakfast... #speaker:Lily #portrait: lily_neutral
-have some if you want. #speaker:Lily #portrait: lily_neutral
-* You made breakfast? #speaker:Mr. Davis #portrait: davis_neutral
-    -> needEnergy
-* Smells good. #speaker:Mr. Davis #portrait: davis_neutral
-    -> smellsGood
-=== needEnergy ===
-Yes. #speaker:Lily #portrait: lily_neutral
-I'm gonna need some energy when I deal with things at the hospital. #speaker:Lily #portrait: lily_neutral
-* You've been spending all your time there. #speaker:Mr. Davis #portrait: davis_neutral
-    Of course. We have a son to take care of. #speaker:Lily #portrait: lily_neutral
-    ->  realize
-*   The hospital?
-    -> theHospital
+Have some breakfast.
+*Smells good.
+...thanks.
+-> thanks
 
-=== realize ===
-I realize that we also have Alex too. I figured you could try to spend more time with him? #speaker:Lily #portrait: lily_neutral
-* That's a lot to ask. #speaker:Mr. Davis #portrait: davis_neutral
-    -> spendTime
-* I'm busy. #speaker:Mr. Davis #portrait: davis_neutral
-    -> busy
-*... #speaker:Mr. Davis #portrait: davis_neutral
-    Alex needs someone with him. #speaker:Lily #portrait: lily_neutral
-->DONE
+*Thanks.
+..mhm..
+-> thanks
 
-=== spendTime ===
-To spend time with your son? #speaker:Lily #portrait: lily_neutral
-* I have to work! #speaker:Mr. Davis #portrait: davis_neutral
-    ->lonely
-* ... #speaker:Mr. Davis #portrait: davis_neutral
-    ->lonely
+*...
+You're welcome.
+...
+-> thanks
 
-=== busy ===
-Not too busy to make time for your son, I hope? #speaker:Lily #portrait: lily_neutral
-* It's a bit difficult. #speaker:Mr. Davis #portrait: davis_neutral
-    I spend most of my time at work. #speaker:Mr. Davis #portrait: davis_neutral
-    ->lonely
-* Of course not. #speaker:Mr. Davis #portrait: davis_neutral
-    There's just so much time in the world. #speaker:Mr. Davis #portrait: davis_neutral
-    I spend most of my time at work. #speaker:Mr. Davis #portrait: davis_neutral
-    ->lonely
+=== thanks ===
+*Are you okay?
+-> notOkay
 
-=== lonely ===
-I get that you have a job, but you can't even put in a little effort? #speaker:Lily #portrait: lily_neutral
-He's lonely. # speaker: Lily
-His brother's in the hospital an his father doesn't want to spend time with him. #speaker:Lily #portrait: lily_neutral
-* You're putting words in my mouth.
-    -> mouth
-* My energy goes into my work. #speaker:Mr. Davis #portrait: davis_neutral
-    -> tired
-* It's not like I don't try. #speaker:Mr. Davis #portrait: davis_neutral
-    -> tryHarder
-->DONE
+*Is something wrong?
+-> notOkay
 
-=== mouth ===
-Of course I want to spend time with him. #speaker:Mr. Davis #portrait: davis_neutral
-So act like it. #speaker:Lily #portrait: lily_neutral
-Oh, and spend more time with George while you're at it. #speaker:Lily #portrait: lily_neutral
-He needs his father. #speaker:Lily #portrait: lily_neutral
-* Alright, alright. #speaker:Mr. Davis #portrait: davis_neutral
-        -> EndLine1
-* ... #speaker:Mr. Davis #portrait: davis_neutral
-        -> EndLine1
+=== notOkay ===
+...
+I'm just worried about George.
+-> worried
 
-=== tired ===
-I can't help that I get tired after work. #speaker:Mr. Davis #portrait: davis_neutral
-Lots of people are in the same situation! #speaker:Mr. Davis #portrait: davis_neutral
-Oh yeah? #speaker:Lily #portrait: lily_neutral
-Two kids, and no money to support them? #speaker:Lily #portrait: lily_neutral
-* ...Well actually...yeah. #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
-* Maybe. #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
-->DONE
+=== haveSomeMore ===
+But I feel like there's something that needs to be resolved here.
+I can tell you're dying to talk about it.
+GOD you're so annoying!
+*Look, just tell me and I'll get outta your hair.
+I'm worried about George!
+Are you happy now?
+Very.
+-> worried
 
-=== tryHarder ===
-Try harder. #speaker:Lily #portrait: lily_neutral
-George needs his father too. #speaker:Lily #portrait: lily_neutral
-* Well, I... #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
-* ... #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
+*Tell me? Please?
+Oh. My. God.
+Sigh...
+I'm worried about George.
+-> worried
 
-=== smellsGood ===
-... # speaker: Lily
-Listen, I'm heading to the hospital later. Do you need anything? #speaker:Lily #portrait: lily_neutral
-* The hospital? #speaker:Mr. Davis #portrait: davis_neutral
-    -> theHospital
-* No thanks. #speaker:Mr. Davis #portrait: davis_neutral
-    -> youSure
-* From the hospital? #speaker:Mr. Davis #portrait: davis_neutral
-    -> fromHospital
+*Someone woke up on the wrong side of the bed...
+Can you shut the hell up?
+Lily.
+We're husband and wife.
+Aren't we supposed to be telling each other things??
+Okay, but I don't want to talk about it right now.
+If you're going to go off about being a good couple then why don't you shove off and give me some space?
+Just tell me and I'll shut up.
+...
+Fine!
+I'm worried about George.
+-> worried
 
-=== theHospital ===
-...Yeah. Our son? In the hospital? I'm going to see him. #speaker:Lily #portrait: lily_neutral
-* Oh, right. #speaker:Mr. Davis #portrait: davis_neutral
-    -> Alright
-* Ah... #speaker:Mr. Davis #portrait: davis_neutral
-    -> Alright
-    
-=== youSure ===
-Are you sure? #speaker:Lily #portrait: lily_neutral
-* Yup. #speaker:Mr. Davis #portrait: davis_neutral
-    Alright. #speaker:Lily #portrait: lily_neutral
-    -> Alright
-* I guess. #speaker:Mr. Davis #portrait: davis_neutral
-    Alright. #speaker:Lily #portrait: lily_neutral
-    -> Alright
 
-=== fromHospital ===
-I mean, do you need me to bring anything? #speaker:Lily #portrait: lily_neutral
-* Oh, I'm good. #speaker:Mr. Davis #portrait: davis_neutral
-    -> youSure
-* ...To the hospital? #speaker:Mr. Davis #portrait: davis_neutral
-    -> OMGyes
 
-=== Alright ===
-You know George keeps asking if you're gonna come by soon. #speaker:Lily #portrait: lily_neutral
-I don't want to keep lying to him. #speaker:Lily #portrait: lily_neutral
-* Tell him I'll be there. #speaker:Mr. Davis #portrait: davis_neutral
-    Weren't you listening? #speaker:Lily #portrait: lily_neutral
-    I don't want to lie anymore! #speaker:Lily #portrait: lily_neutral
-    -> beTen
-* Then tell him the truth. #speaker:Mr. Davis #portrait: davis_neutral
-    I gotta work so he can live. #speaker:Mr. Davis #portrait: davis_neutral
-    You can't be that insensitive! #speaker:Lily #portrait: lily_neutral
-    He might be 9, but he still understands how things work. #speaker:Lily #portrait: lily_neutral
-    -> beTen
-* I don't want to lie to him either. #speaker:Mr. Davis #portrait: davis_neutral
-    ->makeAnEffort
 
-=== beTen ===
-He'll soon be 10. We can't keep treating him like a child that doesn't know anything. #speaker:Lily #portrait: lily_neutral
-* ...I know.
-    -> stillYoung
-* 9 is still very young. #speaker:Mr. Davis #portrait: davis_neutral
-    He knows more than you think. #speaker:Lily #portrait: lily_neutral
-    -> stillYoung
 
-=== stillYoung ===
-Alex is still young. He can't spend his childhood alone. #speaker:Lily #portrait: lily_neutral
-So spend time with him, okay? #speaker:Lily #portrait: lily_neutral
-I shouldn't be telling you how to be a a father. #speaker:Lily #portrait: lily_neutral
-* Then don't #speaker:Mr. Davis #portrait: davis_neutral
-    Well, I wouldn't have to if you'd just take responsibility. #speaker:Lily #portrait: lily_neutral
-    Isn't that why I go to work? #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
-* ... #speaker:Mr. Davis #portrait: davis_neutral
-    ->EndLine1
-    
-=== makeAnEffort ====
-Then make an effort to be a father to your son. #speaker:Lily #portrait: lily_neutral
-George might be 9 but he needs both his parents now more than ever. #speaker:Lily #portrait: lily_neutral
-Not just him, but Alex too. #speaker:Lily #portrait: lily_neutral
-* Yeah, alright. #speaker:Mr. Davis #portrait: davis_neutral
-    -> goodFather
-* ... #speaker:Mr. Davis #portrait: davis_neutral
-    -> goodFather
-    
-=== goodFather ===
-I want you to be a good father. #speaker:Lily #portrait: lily_neutral
-or, at least be seen as one. #speaker:Lily #portrait: lily_neutral
-... #speaker:Mr. Davis #portrait: davis_neutral
-->EndLine2
-
-=== OMGyes ===
-Oh my god. Yes! #speaker:Lily #portrait: lily_neutral
-* Oh, um.. no thanks. #speaker:Mr. Davis #portrait: davis_neutral
-    -> youSure
-*What's at the hospital? #speaker:Mr. Davis #portrait: davis_neutral
-    You're unbelievable. #speaker:Lily #portrait: lily_neutral
-    Your son?? #speaker:Lily #portrait: lily_neutral
-    He's sick?? #speaker:Lily #portrait: lily_neutral
-        -> forget
-
-=== forget ===
-How could you forget? #speaker:Lily #portrait: lily_neutral
-* I was just refreshing my memory... #speaker:Mr. Davis #portrait: davis_neutral
-    -> BeAFather
-* I didn't forget. #speaker:Mr. Davis #portrait: davis_neutral
-    -> BeAFather
-    
-=== BeAFather ===
-Well, I hope you remember you have a second son too! #speaker:Lily #portrait: lily_neutral
-You need to spend more time with both your sons! #speaker:Lily #portrait: lily_neutral
-Be a father!
-    * ..sigh.. #speaker:Mr. Davis #portrait: davis_neutral
-    Whatever. #speaker:Lily #portrait: lily_neutral
-     ->EndLine1
-    * ... #speaker:Mr. Davis #portrait: davis_neutral
-    Whatever. #speaker:Lily #portrait: lily_neutral
-     ->EndLine1
-
-=== EndLine1 ===
-Whatever. #speaker:Lily #portrait: lily_neutral
-    I'm done with this conversation. #speaker:Lily #portrait: lily_neutral
-    Great. #speaker:Mr. Davis #portrait: davis_neutral
-    -> END
-    
-=== EndLine2 ===
-I'm done with this conversation. #speaker:Lily #portrait: lily_neutral
-Great.#speaker:Mr. Davis #portrait: davis_neutral
--> END
