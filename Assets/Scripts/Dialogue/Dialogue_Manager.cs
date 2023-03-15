@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class Dialogue_Manager : MonoBehaviour
 {
     [Header("Params")]
     [SerializeField] private float typingSpeed = 0.04f;
+
+    [Header("Globals Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
 
     [Header("Dialogue UI")]
     [SerializeField] public GameObject dialoguePanel;
@@ -48,6 +52,8 @@ public class Dialogue_Manager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
+    private Dialogue_Variables dialogueVariables;
+
     private void Awake()
     {
         if (instance != null)
@@ -57,6 +63,7 @@ public class Dialogue_Manager : MonoBehaviour
         }
         instance = this;
 
+        dialogueVariables = new Dialogue_Variables(globalsInkFile.filePath);
         audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
@@ -104,6 +111,8 @@ public class Dialogue_Manager : MonoBehaviour
         DialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
+        dialogueVariables.StartListening(CurrentStory);
+
         ContinueStory();
 
 
@@ -111,6 +120,7 @@ public class Dialogue_Manager : MonoBehaviour
     }
     private void ExitDialogueMode()
     {
+        dialogueVariables.StopListening(CurrentStory);
 
         DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);

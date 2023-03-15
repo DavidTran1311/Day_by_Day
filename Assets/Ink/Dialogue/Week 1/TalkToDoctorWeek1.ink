@@ -12,7 +12,7 @@ So, what are the options? #speaker:Lily #portrait:lily_neutral
 Right now, as you know, we've been giving him chemotherapy. # speaker:Dr. Yang #portrait:drYang_neutral
 But, it's not going accoring to plan. # speaker:Dr. Yang #portrait:drYang_neutral
 Other treatments would be targeted therapy, radiation therapy, and stem cell transplant. # speaker:Dr. Yang #portrait:drYang_neutral
-Stem cell transplants can be very costly... # speaker:Dr. Yang #portrait:drYang_neutral
+Stem cell transplants can be very costly and not to mention risky... # speaker:Dr. Yang #portrait:drYang_neutral
 ...so we're going to try our best to avoid having to even consider it. # speaker:Dr. Yang #portrait:drYang_neutral
 What are the other ones? #speaker:Lily #portrait:lily_neutral
 Targeted therapy uses drugs to specifically target a type of gene or protein within the cancer cell. # speaker:Dr. Yang #portrait:drYang_neutral
@@ -27,7 +27,7 @@ But, like I said, it can affect healthy cells as well. # speaker:Dr. Yang #portr
  === notThatSimple ===
 It's not that simple. # speaker:Dr. Yang #portrait:drYang_neutral
 It all depends on the type of leukemia and his overall needs and condition. # speaker:Dr. Yang #portrait:drYang_neutral
-George has Acute Lymphoblastic Leukemia, ALL for short. # speaker:Dr. Yang #portrait:drYang_neutral
+George has Acute Lymphoblastic Leukemia. # speaker:Dr. Yang #portrait:drYang_neutral
 We have to consider a lot of things before we decide on a treatment for him. # speaker:Dr. Yang #portrait:drYang_neutral
 The targeted therapy treatment only work if the cells have the protein or gene attached to it. # speaker:Dr. Yang #portrait:drYang_neutral
 We'd have to conduct special tests to figure out if it's present at all. # speaker:Dr. Yang #portrait:drYang_neutral
@@ -38,7 +38,7 @@ His brain is still in development. The radiation will affect his head if he unde
 But, of course, there's stem cell transplants, but they're quite risky. # speaker:Dr. Yang #portrait:drYang_neutral
 It's not the ideal option, but it is a possibility. # speaker:Dr. Yang #portrait:drYang_neutral
 
-So, you're telling us that there's no other option besides chemo? #speaker:Lily #portrait:lily_neutral
+So, basically you're telling us that there's no other good option besides chemo? #speaker:Lily #portrait:lily_neutral
 + It can't be the only thing! #speaker:Mr. Davis #portrait:davis_neutral
 There must be something you can do. #speaker:Mr. Davis #portrait:davis_neutral
 Chemo isn't working and you're telling me that these other options can't even be done? #speaker:Mr. Davis #portrait:davis_neutral
@@ -64,6 +64,7 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
  We'll do whatever we can to help your son. # speaker:Dr. Yang #portrait:drYang_neutral
  In the meantime, spend whatever time you have with your son. # speaker:Dr. Yang #portrait:drYang_neutral
  He's in a fragile state right now, and a parent's support is always helpful. # speaker:Dr. Yang #portrait:drYang_neutral
+ I'd also suggest spending some time discussing what you think is best for George as a family.
  
  -> END
  

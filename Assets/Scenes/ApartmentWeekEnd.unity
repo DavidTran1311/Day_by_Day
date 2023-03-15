@@ -8850,6 +8850,7 @@ MonoBehaviour:
   popUpHospital: {fileID: 895968675}
   AreYouSureHospital: {fileID: 1073404430}
   AreYouSureHome: {fileID: 219666533}
+  popUpCanvas: {fileID: 0}
 --- !u!61 &1809724500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10120,6 +10121,10 @@ PrefabInstance:
       propertyPath: dialogueTypingSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: 2c1256bd8052111419ae1e28b8808039, type: 3}
+    - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
+      propertyPath: globalsInkFile.inkAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: bdfddfd2be0518b498f0943a8cff8e27, type: 3}
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: dialogueTypingSoundClips.Array.size
       value: 4

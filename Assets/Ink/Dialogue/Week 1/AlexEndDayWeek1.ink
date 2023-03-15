@@ -1,3 +1,8 @@
+INCLUDE globals.ink
+
+{ alex_trick == "": -> main | -> trick }
+
+=== main ===
 Daddy! #speaker:Alex #portrait:alex_neutral
 You're home! #speaker:Alex #portrait:alex_neutral
 Hi, buddy! #speaker:Mr. Davis #portrait:davis_neutral
@@ -265,6 +270,37 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
   I'll see you. #speaker:Lily #portrait:lily_neutral
   Bye. #speaker:Mr. Davis #portrait:davis_neutral
  
+ ~ alex_trick = "trick"
+ -> END
+ 
+ === trick ===
+ Daddy! #speaker:Alex #portrait:alex_neutral
+ Can I show you my trick now? #speaker:Alex #portrait:alex_neutral
+ Sure, bud. #speaker:Mr. Davis #portrait:davis_neutral
+ What is it? #speaker:Mr. Davis #portrait:davis_neutral
+ Look, look! #speaker:Alex #portrait:alex_neutral
+ When I move the pencil like this, it looks like rubber. #speaker:Alex #portrait:alex_neutral
+ WoooOOooO #speaker:Alex #portrait:alex_neutral
+ See? #speaker:Alex #portrait:alex_neutral
+ But it's not rubber. #speaker:Alex #portrait:alex_neutral
+ It's just a regular pencil. #speaker:Alex #portrait:alex_neutral
+ Isn't that cool? #speaker:Alex #portrait:alex_neutral
+ + Sure is, bud. #speaker:Mr. Davis #portrait:davis_neutral
+    :D #speaker:Alex #portrait:alex_neutral
+    -> END
+ + This is what you wanted to show me? #speaker:Mr. Davis #portrait:davis_neutral
+    ...yeah. #speaker:Alex #portrait:alex_neutral
+    It's cool, right? #speaker:Alex #portrait:alex_neutral
+    -> coolRight
+    
+    === coolRight ===
+    + Way cool, bud. #speaker:Mr. Davis #portrait:davis_neutral
+    :D #speaker:Alex #portrait:alex_neutral
+    -> END
+    + I've seen better. #speaker:Mr. Davis #portrait:davis_neutral
+    >:( #speaker:Alex #portrait:alex_neutral
+    I hate you! #speaker:Alex #portrait:alex_neutral
+    ... #speaker:Mr. Davis #portrait:davis_neutral
  -> END
  
 
