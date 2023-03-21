@@ -1,7 +1,3 @@
-INCLUDE globals.ink
-
-{ alex_trick == "": -> main | -> trick }
-
 === main ===
 Daddy! #speaker:Alex #portrait:alex_neutral
 You're home! #speaker:Alex #portrait:alex_neutral
@@ -270,11 +266,10 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
   I'll see you. #speaker:Lily #portrait:lily_neutral
   Bye. #speaker:Mr. Davis #portrait:davis_neutral
  
- ~ alex_trick = "trick"
  -> END
  
  === trick ===
- Daddy! #speaker:Alex #portrait:alex_neutral
+ Daddy! Daddy! Daddy! #speaker:Alex #portrait:alex_neutral
  Can I show you my trick now? #speaker:Alex #portrait:alex_neutral
  Sure, bud. #speaker:Mr. Davis #portrait:davis_neutral
  What is it? #speaker:Mr. Davis #portrait:davis_neutral
@@ -300,7 +295,24 @@ Come on! There must be something you can do! #speaker:Lily #portrait:lily_neutra
     + I've seen better. #speaker:Mr. Davis #portrait:davis_neutral
     >:( #speaker:Alex #portrait:alex_neutral
     I hate you! #speaker:Alex #portrait:alex_neutral
-    ... #speaker:Mr. Davis #portrait:davis_neutral
  -> END
+ 
+ === happy ===
+ Daddy, will you promise to come play with me tomorrow again?
+ It's boring playing by myself all the time.
+ + Okay, kiddo.
+    I promise.
+    Yay!!!
+    -> END
+ + I can't promise anything.
+    Why do you and mommy always leave me alone?!
+    I hate George!
+    Leave me alone!
+    -> END
+ 
+ === angry ===
+I don't want to show you anything ever again!
+Leave me alone!
+-> END
  
 
