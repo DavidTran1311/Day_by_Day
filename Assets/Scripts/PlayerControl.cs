@@ -35,7 +35,15 @@ public class PlayerControl : MonoBehaviour
     public GameObject boxSpawn;
 
     public GameObject end;
-    
+
+    private LineRenderer lr;
+    public Vector3[] points;
+
+
+    private void Awake()
+    {
+        lr = GetComponent<LineRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -151,6 +159,17 @@ public class PlayerControl : MonoBehaviour
             boxPrefab.transform.position = transform.position;
         }
 
+        if (carrying == true)
+        {
+            lr.positionCount = 2;
+            points[0] = gameObject.transform.position;
+            points[1] = spawned.transform.position;
+            lr.SetPositions(points);
+        } else
+        {
+            lr.positionCount = 0;
+        }
+        
 
 
     }
@@ -196,6 +215,7 @@ public class PlayerControl : MonoBehaviour
 
                     spawned = GameObject.Instantiate(Dropoff, dropOffArray[goal].transform.position, Quaternion.identity);
 
+                    
 
                 }
                 else if (carrying == true)
