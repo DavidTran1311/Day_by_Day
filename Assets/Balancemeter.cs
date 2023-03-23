@@ -18,6 +18,8 @@ public class Balancemeter : MonoBehaviour
     public bool fall;
     public int fallCount;
     public Ladder lad;
+    public Ladder lad1;
+    public Ladder lad2;
     public GameObject p;
     public GameObject lb;
     float intensity;
@@ -39,7 +41,7 @@ public class Balancemeter : MonoBehaviour
         initialX = met.transform.position.x;
         //Debug.Log(initialX);
 
-        if (lad.off == false)
+        if (!lad.off || !lad1.off || !lad2.off)
         {
 
             if (transform.position.x > initialX)

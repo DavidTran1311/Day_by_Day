@@ -9,7 +9,10 @@ public class PlayerControl : MonoBehaviour
     private float speed = 3f;
     [SerializeField] private Rigidbody2D rb;
     public GameObject ladder;
+    public GameObject ladder1;
     public Ladder lad;
+    public Ladder lad1;
+    public Ladder lad2;
     public Animator anim;
     public int goal;
     public bool topped = false;
@@ -64,10 +67,9 @@ public class PlayerControl : MonoBehaviour
         anim.SetBool("isCarrying", carrying);
 
 
-        if (lad.off)
+        if (lad.off && lad1.off && lad2.off)
         {
 
-            Debug.Log(stationaryY);
 
             if (Movement.x > 0)
             {
@@ -110,6 +112,7 @@ public class PlayerControl : MonoBehaviour
 
         } else {
 
+            Debug.Log("test");
             anim.SetBool("isLadder", true);
             if (goal < dropOffArray.Length)
             {
@@ -121,6 +124,7 @@ public class PlayerControl : MonoBehaviour
             {
                 rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed/6 * Time.deltaTime));
                 stationaryY = false;
+                
             } else
             {
                 stationaryY = true;
@@ -178,7 +182,7 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
 
-        if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space)&& lad.off)
+        if (other.tag == "Carryable" && Input.GetKey(KeyCode.Space)&& lad.off && lad1.off && lad2.off)
         {
 
 

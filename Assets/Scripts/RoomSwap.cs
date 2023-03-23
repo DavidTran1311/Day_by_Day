@@ -10,6 +10,7 @@ public class RoomSwap : MonoBehaviour
     public string LadderMinigame;
     public string Apartment;
     public string DoctorsOffice;
+    public string Breakroom;
     public float inRange;
 
     void Start()
@@ -74,6 +75,12 @@ public class RoomSwap : MonoBehaviour
     public void LoadEndScene()
     {
         SceneManager.LoadScene("EndScreen");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadBreakroom()
+    {
+        SceneManager.LoadScene("Breakroom");
         Time.timeScale = 1f;
     }
 

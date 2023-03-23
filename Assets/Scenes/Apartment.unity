@@ -2435,6 +2435,7 @@ MonoBehaviour:
   LadderMinigame: LadderMinigame
   Apartment: Apartment
   DoctorsOffice: DoctorsOffice
+  Breakroom: Breakroom
   inRange: 0
 --- !u!1 &278190587
 GameObject:
@@ -7056,11 +7057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6945527924057293551, guid: b1994c6a7228e3a438b681abb9e6cc35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.01
+      value: -7.45
       objectReference: {fileID: 0}
     - target: {fileID: 6945527924057293551, guid: b1994c6a7228e3a438b681abb9e6cc35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 6945527924057293551, guid: b1994c6a7228e3a438b681abb9e6cc35, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7337,6 +7338,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4953887, y: 1.5716023}
   m_EdgeRadius: 0
+--- !u!82 &1712482032 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2214822280899354636, guid: 6588a91893bb4aa4daad3164aa7e99a1, type: 3}
+  m_PrefabInstance: {fileID: 2214822280520195076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1799776579
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,11 +7466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8733990276226396591, guid: 054a953f1ba658448af66b988fa56c1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.01
+      value: -7.45
       objectReference: {fileID: 0}
     - target: {fileID: 8733990276226396591, guid: 054a953f1ba658448af66b988fa56c1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 8733990276226396591, guid: 054a953f1ba658448af66b988fa56c1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7544,11 +7550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468380621921245127, guid: db591c1f6a3caf14598fa660cd04319f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.01
+      value: -7.45
       objectReference: {fileID: 0}
     - target: {fileID: 1468380621921245127, guid: db591c1f6a3caf14598fa660cd04319f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 1468380621921245127, guid: db591c1f6a3caf14598fa660cd04319f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7582,6 +7588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2746400695837790157, guid: db591c1f6a3caf14598fa660cd04319f, type: 3}
+      propertyPath: footsies
+      value: 
+      objectReference: {fileID: 1712482032}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db591c1f6a3caf14598fa660cd04319f, type: 3}
 --- !u!1 &1948866992 stripped
@@ -7940,6 +7950,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 217937723}
+    - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadBreakroom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
 --- !u!1001 &2214822280520195076
