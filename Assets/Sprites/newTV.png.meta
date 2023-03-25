@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c222781a34b312d478a3e2ddf82ea399
+guid: c6419fc438cc7934ebe5214982a857b1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,33 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DBDchecklist_0
+      name: newTV_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 112
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 134d3dbab2dfa0a4ebef8933a4596ff5
-      internalID: 433460906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DBDchecklist_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 16
+        x: 4
+        y: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51fc856b3e274f342ae046767542968d
-      internalID: 2145823775
+      spriteID: c61fea023c0215649aa962affbd0bb74
+      internalID: -995085971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DBDchecklist_2
+      name: newTV_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 80
-        width: 18
-        height: 14
+        x: 4
+        y: 0
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5669bbb6cd4d64a8513fe1479196e6
-      internalID: 1162295544
+      spriteID: d7f2e2ccd97e3a8498ab68c3901822b4
+      internalID: -476779696
       vertices: []
       indices: 
       edges: []
@@ -170,16 +149,15 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DBDchecklist_2: 1162295544
-      DBDchecklist_1: 2145823775
-      DBDchecklist_0: 433460906
+      newTV_1: -476779696
+      newTV_0: -995085971
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
