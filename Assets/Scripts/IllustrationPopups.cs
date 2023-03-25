@@ -6,27 +6,46 @@ using UnityEngine.EventSystems;
 public class IllustrationPopups : MonoBehaviour
 {
     [SerializeField] private GameObject illustration;
-    //[0Serializefield] private Image
-    // Start is called before the first frame update
+    private bool PlayerInRange;
+
     void Start()
     {
         illustration.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        imagePopup();
+    }
+
+    void imagePopup()
+    {
+        if (PlayerInRange == true && Input.GetKey(KeyCode.E))
+        {
+            illustration.SetActive(true);
+        }
+
+        if (PlayerInRange == false)
+        {
+            illustration.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        illustration.SetActive(true);
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerInRange = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        illustration.SetActive(false);
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerInRange = false;
+        }
     }
 
 }
