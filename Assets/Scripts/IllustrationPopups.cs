@@ -21,12 +21,14 @@ public class IllustrationPopups : MonoBehaviour
 
     void imagePopup()
     {
-        if (PlayerInRange == true && Input.GetKey(KeyCode.E))
+        if (PlayerInRange == true && Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
-            illustration.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                illustration.SetActive(true);
+            }
         }
-
-        if (PlayerInRange == false)
+        else
         {
             illustration.SetActive(false);
         }
