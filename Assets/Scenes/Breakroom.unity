@@ -3389,6 +3389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCLucas Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3825738324422254673, guid: fd30463a3b66ea54b80b4657ea844553, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825738324422254678, guid: fd30463a3b66ea54b80b4657ea844553, type: 3}
       propertyPath: m_RootOrder
       value: 17

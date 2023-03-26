@@ -2549,6 +2549,7 @@ MonoBehaviour:
   DoctorsOffice: DoctorsOffice
   Breakroom: Breakroom
   WeekTwoBreakroom: WeekTwoBreakroom
+  ApartmentWeekTwo: 
   inRange: 0
 --- !u!1 &278190587
 GameObject:
@@ -8029,6 +8030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: fcda65868e7b4f24b9bdbfe443dfa0ff, type: 3}
+  deezNuts: {fileID: 1221667071}
 --- !u!1 &1248744617
 GameObject:
   m_ObjectHideFlags: 0
@@ -10781,6 +10783,14 @@ PrefabInstance:
     - target: {fileID: 8494608997669274733, guid: ae0501d98741b484fa13a699ecbde715, type: 3}
       propertyPath: m_Name
       value: Canvas HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494608998451313320, guid: ae0501d98741b484fa13a699ecbde715, type: 3}
+      propertyPath: m_text
+      value: $4,838.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494608999683439022, guid: ae0501d98741b484fa13a699ecbde715, type: 3}
+      propertyPath: m_text
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae0501d98741b484fa13a699ecbde715, type: 3}
