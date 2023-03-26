@@ -74,6 +74,18 @@ public class PlayerControl : MonoBehaviour
         anim.SetBool("stationaryY", stationaryY);
         anim.SetBool("isCarrying", carrying);
 
+        if (lad.fall == true || lad1.fall == true || lad2.fall == true)
+        {
+            Debug.Log("check");
+
+            lad.off = true;
+            lad1.off = true;
+            lad2.off = true;
+            lad.fall = false;
+            lad1.fall = false;
+            lad2.fall = false;
+        }
+
 
         if (lad.off && lad1.off && lad2.off)
         {
@@ -120,7 +132,6 @@ public class PlayerControl : MonoBehaviour
 
         } else {
 
-            Debug.Log("test");
             anim.SetBool("isLadder", true);
             if (goal < dropOffArray.Length)
             {

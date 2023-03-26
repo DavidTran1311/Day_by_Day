@@ -8,6 +8,7 @@ public class Ladder : MonoBehaviour
     public GameObject p;
     SpriteRenderer sr;
     public bool off;
+    public bool fall;
     public BoxCollider2D bc;
     float cooldown;
     bool cdstart;
@@ -62,10 +63,13 @@ public class Ladder : MonoBehaviour
         if (bm.fall)
         {
             p.transform.position = new Vector2(-1,-3);
-            off = true;
-            //sr.color = Color.blue;
             bc.offset = new Vector2(-0.06f, 1f);
+            fall = true;
+            //sr.color = Color.blue;
+            
             meter.transform.position = new Vector2(-100, 100);
+            off = true;
+            Debug.Log("collidercheck");
             //pc.goal = 0;
             if (pc.topped == true)
             {
@@ -116,14 +120,17 @@ public class Ladder : MonoBehaviour
                     bc.offset = new Vector2(-0.06f, -1.4f);
                     meter.transform.position = meterPos;
                     needle.transform.position = new Vector2(meter.transform.position.x, needle.transform.position.y);
-                     
+                    
+
                 }
                 else
                 {
-                    off = true;
+                    
                     //sr.color = Color.blue;
                     bc.offset = new Vector2(-0.06f, 1f);
                     meter.transform.position = new Vector2(-100,100);
+                    off = true;
+                    
                     if (pc.topped == true)
                     {
                         pc.topped = false;

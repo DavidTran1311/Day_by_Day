@@ -276,7 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   off: 0
-  bc: {fileID: 6501705270801997782}
+  fall: 0
+  bc: {fileID: 0}
   cooldowntime: 1
   meter: {fileID: 0}
   pc: {fileID: 0}
