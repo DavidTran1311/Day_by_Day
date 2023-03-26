@@ -11,6 +11,8 @@ public class RoomSwap : MonoBehaviour
     public string Apartment;
     public string DoctorsOffice;
     public string Breakroom;
+    public string WeekTwoBreakroom;
+    public string ApartmentWeekTwo;
     public float inRange;
 
     void Start()
@@ -81,6 +83,18 @@ public class RoomSwap : MonoBehaviour
     public void LoadBreakroom()
     {
         SceneManager.LoadScene("Breakroom");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadBreakroomWeekTwo()
+    {
+        SceneManager.LoadScene("BreakroomWeekTwo");
+        Time.timeScale = 1f;
+    }
+
+    public void LoadApartmentWeekTwo()
+    {
+        SceneManager.LoadScene("ApartmentWeekTwo");
         Time.timeScale = 1f;
     }
 

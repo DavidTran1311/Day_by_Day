@@ -348,6 +348,8 @@ MonoBehaviour:
   Apartment: Apartment
   DoctorsOffice: DoctorsOffice
   Breakroom: 
+  WeekTwoBreakroom: 
+  ApartmentWeekTwo: 'ApartmentWeekTwo '
   inRange: 0
 --- !u!61 &346239287
 BoxCollider2D:

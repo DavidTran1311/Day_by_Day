@@ -401,6 +401,8 @@ MonoBehaviour:
   Apartment: Apartment
   DoctorsOffice: DoctorsOffice
   Breakroom: 
+  WeekTwoBreakroom: 
+  ApartmentWeekTwo: ApartmentWeekTwo
   inRange: 0
 --- !u!61 &346239287
 BoxCollider2D:
@@ -1957,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 346239286}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadEndScene
+      value: LoadApartmentWeekTwo
       objectReference: {fileID: 0}
     - target: {fileID: 1837251364953406694, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1965,7 +1967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_text
-      value: End the Week?
+      value: End Week 1?
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170162, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_AnchoredPosition.x

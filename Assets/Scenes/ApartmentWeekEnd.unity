@@ -5557,7 +5557,7 @@ PrefabInstance:
     - target: {fileID: 1837251363607003235, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1809724499}
+      objectReference: {fileID: 0}
     - target: {fileID: 1837251363607003235, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadEndScreen
@@ -5681,14 +5681,14 @@ PrefabInstance:
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1809724499}
+      objectReference: {fileID: 1809724502}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadEndScreen
+      value: LoadApartmentWeekTwo
       objectReference: {fileID: 0}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopUpQuestion, Assembly-CSharp
+      value: RoomSwap, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1837251364953406694, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5700,7 +5700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_text
-      value: End the Week?
+      value: End Week 1?
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365151170161, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_fontSize
@@ -5720,11 +5720,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
---- !u!1 &895968675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1837251365134228395, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
-  m_PrefabInstance: {fileID: 895968672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &895968676 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1837251364412071166, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
@@ -10049,7 +10044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809724501}
   - component: {fileID: 1809724500}
-  - component: {fileID: 1809724499}
+  - component: {fileID: 1809724502}
   m_Layer: 0
   m_Name: HospitalChangeTrigger
   m_TagString: Untagged
@@ -10057,22 +10052,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1809724499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809724498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c7f9d454d0ca0f4492687021e90fcd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpHospital: {fileID: 895968675}
-  AreYouSureHospital: {fileID: 1073404430}
-  AreYouSureHome: {fileID: 219666533}
-  popUpCanvas: {fileID: 1362181160}
 --- !u!61 &1809724500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10114,6 +10093,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809724502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809724498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c517e92c77264c24395d3b0dc2c09e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpUI: {fileID: 1362181160}
+  visualCue: {fileID: 946502305}
+  visualE: {fileID: 216863564}
+  LadderMinigame: 
+  Apartment: 
+  DoctorsOffice: 
+  Breakroom: 
+  WeekTwoBreakroom: 
+  ApartmentWeekTwo: ApartmentWeekTwo
+  inRange: 0
 --- !u!1001 &1813313398
 PrefabInstance:
   m_ObjectHideFlags: 0

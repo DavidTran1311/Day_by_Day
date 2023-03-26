@@ -2548,6 +2548,7 @@ MonoBehaviour:
   Apartment: Apartment
   DoctorsOffice: DoctorsOffice
   Breakroom: Breakroom
+  WeekTwoBreakroom: WeekTwoBreakroom
   inRange: 0
 --- !u!1 &278190587
 GameObject:
@@ -9722,7 +9723,7 @@ PrefabInstance:
       objectReference: {fileID: 217937723}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadBreakroom
+      value: LoadBreakroomWeekTwo
       objectReference: {fileID: 0}
     - target: {fileID: 1837251365134228395, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_IsActive

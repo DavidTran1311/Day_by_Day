@@ -65,16 +65,42 @@ This is just hearsay, though. # speaker: Dr. Yang #portrait: drYang_neutral
 I can't guarantee that it won't happen to this hospital. # speaker: Dr. Yang #portrait: drYang_neutral
 But, you've got your insurance so you will be fine. # speaker: Dr. Yang #portrait: drYang_neutral
 Do you have any questions before I leave? # speaker: Dr. Yang #portrait: drYang_neutral
-    * What kinds of treatment do you suggest for George? # speaker: Mr. Davis #portrait: davis_neutral
-    As I mentioned the week before, we looked at stem cell transplants... # speaker: Dr. Yang #portrait: drYang_neutral
-    ...though those are very risky and, not to mention, very expensice. # speaker: Dr. Yang #portrait: drYang_neutral
-    -> weCare
-    * What if I can't pay for George? # speaker: Mr. Davis #portrait: davis_neutral
-    -> weCare
-    * Are there any cheaper alternatives? # speaker: Mr. Davis #portrait: davis_neutral
-    -> weCare
-    * I'm good. # speaker: Mr. Davis #portrait: davis_neutral
-    -> weCare
+ + What kinds of treatment do you suggest for George? # speaker: Mr. Davis #portrait: davis_neutral
+-> treatments
+
+ + What if I can’t pay for George? # speaker: Mr. Davis #portrait: davis_neutral
+-> cantPay
+
+ + I’m good. # speaker: Mr. Davis #portrait: davis_neutral
+-> weCare
+
+=== treatments ===
+As I mentioned the week before, we looked at stem cell transplants… # speaker: Dr. Yang #portrait: drYang_neutral
+…though those are very risky and, not to mention, very expensive. # speaker: Dr. Yang #portrait: drYang_neutral
+We also looked at radiation therapy and targeted treatment therapy. # speaker: Dr. Yang #portrait: drYang_neutral
+For those ones, we’d need to do more testing on George… # speaker: Dr. Yang #portrait: drYang_neutral
+…to see if those apply to him. # speaker: Dr. Yang #portrait: drYang_neutral
+Right now, chemotherapy is your best option. # speaker: Dr. Yang #portrait: drYang_neutral
+-> anyMoreQuestions
+
+=== cantPay ===
+Like I said, as long as you have your insurance… # speaker: Dr. Yang #portrait: drYang_neutral
+…we’ll be able to keep your son here. # speaker: Dr. Yang #portrait: drYang_neutral
+If you’re unable to pay, then we have to consider… # speaker: Dr. Yang #portrait: drYang_neutral
+…discharging him or transferring him to a public funded hospital. # speaker: Dr. Yang #portrait: drYang_neutral
+I wouldn’t recommend a transfer. # speaker: Dr. Yang #portrait: drYang_neutral
+The other hospitals won’t care for him as much as we do here. # speaker: Dr. Yang #portrait: drYang_neutral
+-> anyMoreQuestions
+
+=== anyMoreQuestions ===
+Do you have any more questions? # speaker: Dr. Yang #portrait: drYang_neutral
++ What kinds of treatment do you suggest for George? # speaker: Mr. Davis #portrait: davis_neutral
+-> treatments
++ What if I can’t pay for George? # speaker: Mr. Davis #portrait: davis_neutral
+-> cantPay
++ I’m good. # speaker: Mr. Davis #portrait: davis_neutral
+-> weCare
+
     
 ===weCare===
 We care for your son. # speaker: Dr. Yang #portrait: drYang_neutral
