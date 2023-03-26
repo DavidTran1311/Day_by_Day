@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class Dialogue_Manager : MonoBehaviour
 {
