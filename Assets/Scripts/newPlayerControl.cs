@@ -15,6 +15,7 @@ public class newPlayerControl : MonoBehaviour
     public GameObject eDoor;
     public GameObject eNPC;
     public GameObject eAlex;
+    bool paused;
 
 
 
@@ -37,12 +38,12 @@ public class newPlayerControl : MonoBehaviour
         anim.SetFloat("Vert", Movement.y);
         anim.SetBool("stationaryX", stationaryX);
         anim.SetBool("stationaryY", stationaryY);
+        anim.SetBool("Paused", paused);
 
 
 
 
-
-        if (Movement.x > 0)
+        if (Movement.x > 0 && Time.timeScale != 0 && paused == false)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             eNews.transform.localScale = new Vector3(-1, 1, 1);
@@ -51,7 +52,7 @@ public class newPlayerControl : MonoBehaviour
             eAlex.transform.localScale = new Vector3(-1, 1, 1);
 
         }
-        else if (Movement.x < 0)
+        else if (Movement.x < 0 && Time.timeScale != 0 && paused == false)
         {
             transform.localScale = new Vector3(1, 1, 1);
             eNews.transform.localScale = new Vector3(1, 1, 1);
@@ -64,10 +65,18 @@ public class newPlayerControl : MonoBehaviour
         if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
             Time.timeScale = 1f;
+            stationaryX = true;
+            stationaryY = true;
+            anim.enabled = false;
+            paused = true;
             return;
         }
         else
         {
+
+            anim.enabled = true;
+            paused = false;
+
             if (Movement.x != 0)
             {
                 rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
