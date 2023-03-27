@@ -10084,6 +10084,10 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: -43.358955
       objectReference: {fileID: 0}
+    - target: {fileID: 2519038626876664808, guid: da5e5535bed84714a81e3c31e4ee12c5, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2519038626876664809, guid: da5e5535bed84714a81e3c31e4ee12c5, type: 3}
       propertyPath: m_SizeDelta.x
       value: 173
