@@ -58,6 +58,10 @@ public class Ladder : MonoBehaviour
         {
             meter.transform.position = meterPos;
         }
+        else
+        {
+            bc.offset = new Vector2(-0.06f, 1f);
+        }
 
 
         if (bm.fall)

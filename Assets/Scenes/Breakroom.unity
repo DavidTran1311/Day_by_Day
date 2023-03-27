@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressENPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4848178059405217893, guid: 7edf89feded10584b917e8ff4d94255b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4848178059405217894, guid: 7edf89feded10584b917e8ff4d94255b, type: 3}
       propertyPath: m_RootOrder
       value: 0
