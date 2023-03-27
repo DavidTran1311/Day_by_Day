@@ -148,7 +148,7 @@ public class Dialogue_Manager : MonoBehaviour
         else
         {
 
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
 
         }
     }
