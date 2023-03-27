@@ -11,8 +11,8 @@ public class Dialogue_Manager : MonoBehaviour
     [Header("Params")]
     [SerializeField] private float typingSpeed = 0.04f;
 
-    /*[Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;*/
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
     [SerializeField] public GameObject dialoguePanel;
@@ -52,7 +52,7 @@ public class Dialogue_Manager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
-    //private Dialogue_Variables dialogueVariables;
+    private Dialogue_Variables dialogueVariables;
 
     private void Awake()
     {
@@ -63,7 +63,7 @@ public class Dialogue_Manager : MonoBehaviour
         }
         instance = this;
 
-        //dialogueVariables = new Dialogue_Variables(globalsInkFile.filePath);
+        dialogueVariables = new Dialogue_Variables(loadGlobalsJSON);
         audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
@@ -111,16 +111,18 @@ public class Dialogue_Manager : MonoBehaviour
         DialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        //dialogueVariables.StartListening(CurrentStory);
+        dialogueVariables.StartListening(CurrentStory);
 
         ContinueStory();
 
 
 
     }
-    private void ExitDialogueMode()
+    private IEnumerator ExitDialogueMode()
     {
-        //dialogueVariables.StopListening(CurrentStory);
+        yield return new WaitForSeconds(0.2f);
+
+        dialogueVariables.StopListening(CurrentStory);
 
         DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -302,4 +304,15 @@ public void MakeChoice(int ChoiceIndex)
     }
 
 }
+    public Ink.Runtime.Object GetVariableState(string variableName)
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null)
+        {
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
+        }
+        return variableValue;
+    }
+
 }
