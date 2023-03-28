@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndDay : MonoBehaviour
 {
     public string endScreen;
+    public string endScreenWeek2;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,6 @@ public class EndDay : MonoBehaviour
 
     public void EndScreen()
     {
-        SceneManager.LoadScene(endScreen);
+        SceneManager.LoadScene(endScreenWeek2);
     }
 }

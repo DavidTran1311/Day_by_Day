@@ -1021,6 +1021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endScreen: EndScreen
+  endScreenWeek2: EndScreenWeek2
 --- !u!1 &261501805
 GameObject:
   m_ObjectHideFlags: 0

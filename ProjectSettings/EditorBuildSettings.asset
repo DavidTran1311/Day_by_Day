@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeekTwo/LadderMinigameWeek2.unity
     guid: c03ffef5c994fcf4788b2a6ddfb3258c
+  - enabled: 1
+    path: Assets/Scenes/WeekTwo/EndScreenWeek2.unity
+    guid: ae8b90e3ab28f6e43873a08a33fba149
   m_configObjects: {}

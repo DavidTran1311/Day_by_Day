@@ -13,6 +13,7 @@ public class RoomSwap : MonoBehaviour
     public string Breakroom;
     public string WeekTwoBreakroom;
     public string ApartmentWeekTwo;
+    public string EndScreen;
     public float inRange;
 
     void Start()
@@ -97,6 +98,12 @@ public class RoomSwap : MonoBehaviour
         SceneManager.LoadScene("ApartmentWeekTwo");
         Time.timeScale = 1f;
     }
+    
+    public void LoadEndScreenWeek1()
+    {
+        SceneManager.LoadScene("EndScreen");
+    }
+
 
     public void DeactivateOverlay()
     {

@@ -359,7 +359,8 @@ GameObject:
   m_Component:
   - component: {fileID: 346239285}
   - component: {fileID: 346239287}
-  - component: {fileID: 346239286}
+  - component: {fileID: 346239288}
+  - component: {fileID: 346239289}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -382,28 +383,6 @@ Transform:
   m_Father: {fileID: 1862897962}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &346239286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346239284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c517e92c77264c24395d3b0dc2c09e5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpUI: {fileID: 599179369}
-  visualCue: {fileID: 1919560180}
-  visualE: {fileID: 783488963}
-  LadderMinigame: LadderMinigame
-  Apartment: Apartment
-  DoctorsOffice: DoctorsOffice
-  Breakroom: 
-  WeekTwoBreakroom: 
-  ApartmentWeekTwo: ApartmentWeekTwo
-  inRange: 0
 --- !u!61 &346239287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -430,6 +409,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &346239288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346239284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e99d19d44df93469dfd9ce7a66e70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualCue: {fileID: 1919560180}
+  visualE: {fileID: 783488963}
+  newspaperPanel: {fileID: 675379422}
+--- !u!114 &346239289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346239284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c517e92c77264c24395d3b0dc2c09e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpUI: {fileID: 1654924121}
+  visualCue: {fileID: 1919560180}
+  visualE: {fileID: 1000760114}
+  LadderMinigame: 
+  Apartment: 
+  DoctorsOffice: 
+  Breakroom: 
+  WeekTwoBreakroom: 
+  ApartmentWeekTwo: 
+  EndScreen: 
+  inRange: 0
 --- !u!82 &447134728 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2214822280899354636, guid: 6588a91893bb4aa4daad3164aa7e99a1, type: 3}
@@ -1026,14 +1043,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8494608997669274729, guid: ae0501d98741b484fa13a699ecbde715, type: 3}
   m_PrefabInstance: {fileID: 591712201}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &599179369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1837251364412071167, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
-  m_PrefabInstance: {fileID: 1654924120}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &599179372 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1837251364412071166, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+  m_PrefabInstance: {fileID: 1654924120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &675379422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837251365134228395, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
   m_PrefabInstance: {fileID: 1654924120}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &714219287 stripped
@@ -1840,7 +1857,7 @@ PrefabInstance:
     - target: {fileID: 1837251363607003235, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 346239286}
+      objectReference: {fileID: 0}
     - target: {fileID: 1837251363607003235, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadEndScene
@@ -1940,10 +1957,10 @@ PrefabInstance:
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 346239286}
+      objectReference: {fileID: 346239289}
     - target: {fileID: 1837251364953406693, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadApartmentWeekTwo
+      value: LoadEndScene
       objectReference: {fileID: 0}
     - target: {fileID: 1837251364953406694, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1967,6 +1984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+--- !u!1 &1654924121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837251364412071167, guid: 84fda03d76210d74389014cbf7f852c4, type: 3}
+  m_PrefabInstance: {fileID: 1654924120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1688518174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2085,7 +2107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1201046332582816905, guid: 9c34e98cab10d8c48ae4b4dc07db417b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c34e98cab10d8c48ae4b4dc07db417b, type: 3}

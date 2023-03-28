@@ -2,41 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class OtherUI : MonoBehaviour
+public class endScreenWeek2 : MonoBehaviour
 {
     public string Apartment;
-    public string Menu;
+    public string MainMenu;
 
     public GameObject gameOverPanel;
     public GameObject summaryBG;
     public Animator animator;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         gameOverPanel.SetActive(false);
         summaryBG.SetActive(true);
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        //SwitchToWeek2();
+        GameOverScreen();
     }
-   
+
     public void FadeToLevel()
     {
         animator.SetTrigger("FadeToBlack");
     }
 
-
-
-    public void MainMenu()
+    public void GoToMainMenu()
     {
-        SceneManager.LoadScene(Menu);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
@@ -46,13 +41,13 @@ public class OtherUI : MonoBehaviour
         Debug.Log("Quit");
     }
 
-    /*public void SwitchToWeek2()
+    public void GameOverScreen()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("ApartmentWeekTwo");
-
+            gameOverPanel.SetActive(true);
+            summaryBG.SetActive(false);
             //Debug.Log("press");
         }
-    }*/
+    }
 }

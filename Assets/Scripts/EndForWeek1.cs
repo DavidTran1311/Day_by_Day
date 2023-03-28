@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OtherUI : MonoBehaviour
+public class EndForWeek1 : MonoBehaviour
 {
     public string Apartment;
     public string Menu;
@@ -24,9 +24,9 @@ public class OtherUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //SwitchToWeek2();
+        SwitchToWeek2();
     }
-   
+
     public void FadeToLevel()
     {
         animator.SetTrigger("FadeToBlack");
@@ -46,7 +46,7 @@ public class OtherUI : MonoBehaviour
         Debug.Log("Quit");
     }
 
-    /*public void SwitchToWeek2()
+    public void SwitchToWeek2()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -54,5 +54,5 @@ public class OtherUI : MonoBehaviour
 
             //Debug.Log("press");
         }
-    }*/
+    }
 }
