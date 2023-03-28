@@ -16,9 +16,17 @@ public class OtherUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameOverPanel.SetActive(false);
-        summaryBG.SetActive(true);
         Cursor.visible = false;
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
+
+        if (summaryBG != null)
+        {
+            summaryBG.SetActive(true);
+        }
     }
 
     // Update is called once per frame
