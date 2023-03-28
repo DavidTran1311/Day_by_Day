@@ -39,10 +39,17 @@ public class PlayerControl : MonoBehaviour
     private LineRenderer lr;
     public Vector3[] points;
 
+    bool paused;
+    public GameObject ENpc;
+    public GameObject ELadder;
+    SpriteRenderer boxsprite;
+    public Sprite noOutline;
+
 
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        
     }
 
     // Start is called before the first frame update
@@ -52,6 +59,7 @@ public class PlayerControl : MonoBehaviour
         cdstart = false;
         boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
         end.SetActive(false);
+        paused = false;
 
     }
 
@@ -86,6 +94,19 @@ public class PlayerControl : MonoBehaviour
             lad2.fall = false;
         }
 
+        if (Movement.x > 0 && Time.timeScale != 0 && paused == false)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            ENpc.transform.localScale = new Vector3(1, -1, 1);
+            ELadder.transform.localScale = new Vector3(1, -1, 1);
+
+        }
+        else if (Movement.x < 0 && Time.timeScale != 0 && paused == false)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            ENpc.transform.localScale = new Vector3(-1, -1, 1);
+            ELadder.transform.localScale = new Vector3(-1, -1, 1);
+        }
 
         if (lad.off && lad1.off && lad2.off)
         {
@@ -106,7 +127,14 @@ public class PlayerControl : MonoBehaviour
             if (Dialogue_Manager.GetInstance().DialogueIsPlaying)
             {
                 Time.timeScale = 1f;
+                stationaryX = true;
+                stationaryY = true;
+                anim.enabled = false;
+                paused = true;
                 return;
+            } else
+            {
+                paused = false;
             }
 
             if (Movement.x != 0)
@@ -165,17 +193,30 @@ public class PlayerControl : MonoBehaviour
 
         }
 
+        if (spawned != null)
+        {
+            boxsprite = boxPrefab.GetComponent<SpriteRenderer>();
+            Debug.Log(boxsprite);
+            if (carrying == true)
+            {
+                boxsprite.sprite = noOutline;
+            }
+            
+        }
+
         if (carrying == true)
         {
             boxPrefab.transform.position = transform.position;
         }
 
-        if (carrying == true)
+        if (carrying == true && spawned != null)
         {
             lr.positionCount = 2;
             points[0] = gameObject.transform.position;
             points[1] = spawned.transform.position;
             lr.SetPositions(points);
+            
+
         } else
         {
             lr.positionCount = 0;
@@ -227,17 +268,19 @@ public class PlayerControl : MonoBehaviour
                     spawned = GameObject.Instantiate(Dropoff, dropOffArray[goal].transform.position, Quaternion.identity);
 
                     
+                    
 
                 }
                 else if (carrying == true)
                 {
-                    carrying = false;
+                    
 
                     if (spawned != null)
                     {
                         GameObject.Destroy(spawned);
                         Debug.Log("Destroy");
                     }
+                    carrying = false;
 
                 }
 
@@ -279,6 +322,8 @@ public class PlayerControl : MonoBehaviour
             if (goal < dropOffArray.Length)
             {
                 boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
+
+
             } else
             {
                 end.SetActive(true);
