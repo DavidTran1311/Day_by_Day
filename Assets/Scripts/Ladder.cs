@@ -26,6 +26,13 @@ public class Ladder : MonoBehaviour
     private bool PlayerInRange;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        visualE.SetActive(false);
+        visualCue.SetActive(false);
+    }
+
     void Start()
     {
 
@@ -86,13 +93,12 @@ public class Ladder : MonoBehaviour
         //this is to make the trigger UI show
         if (PlayerInRange == true)
         {
-            visualE.SetActive(true);
-            visualCue.SetActive(true);
+            
+
         }
         else
         {
-            visualE.SetActive(false);
-            visualCue.SetActive(false);
+            
         }
 
     }
@@ -104,6 +110,15 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
+
+        if (col.gameObject.tag == "Player")
+        {
+            PlayerInRange = true;
+            Debug.Log("playerinrange");
+            visualE.SetActive(true);
+            visualCue.SetActive(true);
+        } 
+
         if (Input.GetKey(KeyCode.E) && col.tag == "Player")
         {
 
@@ -152,10 +167,7 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            PlayerInRange = true;
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -163,6 +175,9 @@ public class Ladder : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerInRange = false;
+            // Debug.Log("playerinrange");
+            visualE.SetActive(false);
+            visualCue.SetActive(false);
         }
     }
 }

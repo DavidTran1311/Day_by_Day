@@ -16,8 +16,15 @@ public class OtherUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameOverPanel.SetActive(false);
-        summaryBG.SetActive(true);
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
+        if (summaryBG != null)
+        {
+            summaryBG.SetActive(true);
+        }
+        
         Cursor.visible = false;
     }
 
@@ -50,8 +57,15 @@ public class OtherUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            summaryBG.SetActive(false);
-            gameOverPanel.SetActive(true);
+            if (summaryBG != null)
+            {
+                summaryBG.SetActive(false);
+            }
+            if (gameOverPanel != null)
+            {
+                gameOverPanel.SetActive(true);
+            }
+            
 
             //Debug.Log("press");
         }

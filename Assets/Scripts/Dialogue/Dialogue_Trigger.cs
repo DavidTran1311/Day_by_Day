@@ -22,8 +22,7 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         if (PlayerInRange==true && !Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
-            visualE.SetActive(true);
-            visualCue.SetActive(true);
+            
             if (Input.GetKey(KeyCode.E))
             {
                 Dialogue_Manager.GetInstance().EnterDialogueMode(inkJSON); 
@@ -33,8 +32,7 @@ public class Dialogue_Trigger : MonoBehaviour
         }
         else 
         { 
-            visualE.SetActive(false); 
-            visualCue.SetActive(false); 
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,6 +42,8 @@ public class Dialogue_Trigger : MonoBehaviour
             //Debug.Log("in range");
 
             PlayerInRange = true;
+            visualE.SetActive(true);
+            visualCue.SetActive(true);
         }
     }
 
@@ -52,6 +52,8 @@ public class Dialogue_Trigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerInRange = false;
+            visualE.SetActive(false);
+            visualCue.SetActive(false);
         }
     }
 }
