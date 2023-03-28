@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 73655308}
   - component: {fileID: 73655307}
   - component: {fileID: 73655306}
+  - component: {fileID: 73655314}
+  - component: {fileID: 73655313}
   m_Layer: 0
   m_Name: apartment
   m_TagString: Untagged
@@ -295,7 +297,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.045795, y: 0}
+  m_Offset: {x: 9.590828, y: -1.4075222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -306,7 +308,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1211624, y: 10}
+  m_Size: {x: 1.2113276, y: 12.815044}
   m_EdgeRadius: 0
 --- !u!61 &73655297
 BoxCollider2D:
@@ -2282,7 +2284,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.5291615, y: 1.5054418}
+  m_Offset: {x: 5.7036853, y: 1.5054418}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2293,7 +2295,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9153252, y: 0.44335532}
+  m_Size: {x: 2.5662775, y: 0.44335532}
   m_EdgeRadius: 0
 --- !u!61 &73655308
 BoxCollider2D:
@@ -2425,6 +2427,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5448713, y: 0.5926399}
   m_EdgeRadius: 0
+--- !u!61 &73655313
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73655294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.1150126, y: -0.58880043}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5960169, y: 2.507904}
+  m_EdgeRadius: 0
+--- !u!61 &73655314
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73655294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.811538, y: -6.8115797}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.258651, y: 1.930244}
+  m_EdgeRadius: 0
 --- !u!114 &167180180 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2519038627265141099, guid: da5e5535bed84714a81e3c31e4ee12c5, type: 3}
@@ -2550,6 +2604,7 @@ MonoBehaviour:
   Breakroom: Breakroom
   WeekTwoBreakroom: WeekTwoBreakroom
   ApartmentWeekTwo: 
+  EndScreen: 
   inRange: 0
 --- !u!1 &278190587
 GameObject:

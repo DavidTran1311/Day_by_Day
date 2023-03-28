@@ -5812,6 +5812,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 749055718}
     - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+      propertyPath: bc
+      value: 
+      objectReference: {fileID: 1032535393}
+    - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
       propertyPath: bm
       value: 
       objectReference: {fileID: 501368853}
@@ -5833,6 +5837,11 @@ PrefabInstance:
       objectReference: {fileID: 1340237876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+--- !u!61 &1032535393 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6501705270801997782, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+  m_PrefabInstance: {fileID: 1032535392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1034965828
 GameObject:
   m_ObjectHideFlags: 0
@@ -15798,6 +15807,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 749055718}
     - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+      propertyPath: bc
+      value: 
+      objectReference: {fileID: 1832849401}
+    - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
       propertyPath: bm
       value: 
       objectReference: {fileID: 501368853}
@@ -15819,6 +15832,11 @@ PrefabInstance:
       objectReference: {fileID: 1340237876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+--- !u!61 &1832849401 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6501705270801997782, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+  m_PrefabInstance: {fileID: 1832849400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1897460015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17616,6 +17634,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 749055718}
     - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+      propertyPath: bc
+      value: 
+      objectReference: {fileID: 6501705270787995402}
+    - target: {fileID: 6501705271730468079, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
       propertyPath: bm
       value: 
       objectReference: {fileID: 501368853}
@@ -17637,6 +17659,11 @@ PrefabInstance:
       objectReference: {fileID: 1340237876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+--- !u!61 &6501705270787995402 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6501705270801997782, guid: 6afe34bd128b3c34ba2c214611fcd962, type: 3}
+  m_PrefabInstance: {fileID: 6501705270787995401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7746250953363883740
 PrefabInstance:
   m_ObjectHideFlags: 0
