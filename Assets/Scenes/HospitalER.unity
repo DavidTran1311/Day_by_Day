@@ -442,6 +442,7 @@ MonoBehaviour:
   Breakroom: 
   WeekTwoBreakroom: 
   ApartmentWeekTwo: 
+  EndScreen: 
   inRange: 0
 --- !u!61 &346239287
 BoxCollider2D:
@@ -4686,7 +4687,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1799776583
 RectTransform:
