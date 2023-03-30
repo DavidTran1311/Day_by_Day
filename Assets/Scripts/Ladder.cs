@@ -77,8 +77,9 @@ public class Ladder : MonoBehaviour
             bc.offset = new Vector2(-0.06f, 1f);
             fall = true;
             //sr.color = Color.blue;
-            
-            meter.transform.position = new Vector2(-100, 100);
+
+            //meter.transform.position = new Vector2(-100, 100);
+            meter.SetActive(false);
             off = true;
             Debug.Log("collidercheck");
             //pc.goal = 0;
@@ -88,7 +89,7 @@ public class Ladder : MonoBehaviour
             }
             bm.fall = false;
             bm.strike = 0;
-        }
+        } 
 
         //this is to make the trigger UI show
         if (PlayerInRange == true)
@@ -137,14 +138,15 @@ public class Ladder : MonoBehaviour
                     off = false;
                     //sr.color = Color.red;
                     bc.offset = new Vector2(-0.06f, -1.4f);
+                    meter.SetActive(true);
                     meter.transform.position = meterPos;
                     needle.transform.position = new Vector2(meter.transform.position.x, needle.transform.position.y);
                     
-
+                   
                 }
                 else
                 {
-                    
+
                     //sr.color = Color.blue;
                     bc.offset = new Vector2(-0.06f, 1f);
                     meter.transform.position = new Vector2(-100,100);
