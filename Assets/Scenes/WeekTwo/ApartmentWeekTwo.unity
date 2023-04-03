@@ -2490,6 +2490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &169398235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841420503856472022, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
+  m_PrefabInstance: {fileID: 5841420503262369620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206228593
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,6 +7773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1115891176}
   visualE: {fileID: 2304494052087484939}
+  LilyTrigger: {fileID: 0}
+  triggerChecklist: 0
   inkJSON: {fileID: 4900000, guid: cb64c6a69bfd4c244836b859da663aa2, type: 3}
 --- !u!61 &1116091949
 BoxCollider2D:
@@ -7945,7 +7952,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 5841420503485420040, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5841420503485420040, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
       propertyPath: m_SortingLayerID
@@ -8884,6 +8891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 977513523}
   visualE: {fileID: 2304494052087484939}
+  LilyTrigger: {fileID: 0}
+  triggerChecklist: 0
   inkJSON: {fileID: 4900000, guid: d045deccfc8f4ff409bc3b7166ccff4a, type: 3}
 --- !u!61 &1630823161
 BoxCollider2D:
@@ -9474,6 +9483,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 5841420503265825746}
   visualE: {fileID: 2304494052087484939}
+  LilyTrigger: {fileID: 0}
+  triggerChecklist: 0
   inkJSON: {fileID: 4900000, guid: 36f4e80b3d2693a45a29e77774e38a66, type: 3}
 --- !u!61 &2049059529
 BoxCollider2D:
@@ -10288,6 +10299,10 @@ PrefabInstance:
       propertyPath: visualE
       value: 
       objectReference: {fileID: 2304494050485748342}
+    - target: {fileID: 5841420503856472017, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
+      propertyPath: LilyTrigger
+      value: 
+      objectReference: {fileID: 169398235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
 --- !u!4 &5841420503265825745

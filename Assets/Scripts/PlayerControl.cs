@@ -55,6 +55,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         UI.SetActive(false);
         cdstart = false;
         boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
