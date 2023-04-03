@@ -140,25 +140,30 @@ public class PlayerControl : MonoBehaviour
                 paused = false;
             }
 
-            if (Movement.x != 0)
+            if (Movement.x == 0)
             {
-                rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
-                stationaryX = false;
 
-
-            } else
-            {
                 stationaryX = true;
             }
-
-            if (Movement.y != 0)
+            else
             {
-                rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
-                stationaryY = false;
-            } else
+                stationaryX = false;
+            }
+
+
+
+
+            if (Movement.y == 0)
             {
                 stationaryY = true;
             }
+            else
+            {
+                stationaryY = false;
+            }
+
+            rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime,
+                rb.position.y + Movement.y * speed * Time.deltaTime));
 
 
         } else {
