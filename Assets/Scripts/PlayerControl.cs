@@ -74,6 +74,8 @@ public class PlayerControl : MonoBehaviour
         }
         */
 
+        Debug.Log(paused);
+
         Movement.x = Input.GetAxisRaw("Horizontal");
         Movement.y = Input.GetAxisRaw("Vertical");
         anim.SetFloat("Hor", Movement.x);
@@ -134,6 +136,7 @@ public class PlayerControl : MonoBehaviour
                 return;
             } else
             {
+                anim.enabled = true;
                 paused = false;
             }
 
