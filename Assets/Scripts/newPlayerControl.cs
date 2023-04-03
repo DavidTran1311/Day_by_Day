@@ -77,27 +77,33 @@ public class newPlayerControl : MonoBehaviour
             anim.enabled = true;
             paused = false;
 
-            if (Movement.x != 0)
+            if (Movement.x == 0)
             {
-                rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime, rb.position.y));
-                stationaryX = false;
-                Debug.Log("true");
 
-            }
-            else
-            {
                 stationaryX = true;
+            } else
+            {
+                stationaryX = false;
             }
 
-            if (Movement.y != 0)
-            {
-                rb.MovePosition(new Vector2(rb.position.x, rb.position.y + Movement.y * speed * Time.deltaTime));
-                stationaryY = false;
-            }
-            else
+            
+            
+
+           if (Movement.y == 0)
             {
                 stationaryY = true;
+            } else
+            {
+                stationaryY = false;
             }
+
+                rb.MovePosition(new Vector2(rb.position.x + Movement.x * speed * Time.deltaTime,
+                    rb.position.y + Movement.y * speed * Time.deltaTime));
+            
+            
+            
+            
+
         }
 
 
