@@ -5,40 +5,41 @@ using UnityEngine.EventSystems;
 
 public class ChecklistZoom : MonoBehaviour
 {
-    public GameObject smallList;
-    public GameObject bigList;
-    public bool zoomedIn;
-
-    void Start()
-    {
-        smallList.SetActive(true);
-        bigList.SetActive(false);
-        zoomedIn = false;
-    }
-
+    public Animator anim;
+    public bool checklistClosed = true;
+    public bool checklistOpened = false;
 
     void Update()
     {
-        zoom();
+
     }
 
-    void zoom()
+    public void OpenChecklist()
     {
-        if (Input.GetKey(KeyCode.L) && zoomedIn == false)
-        {
-            smallList.SetActive(false);
-            bigList.SetActive(true);
-            zoomedIn = true;
 
+        if (checklistClosed == true)
+        {
+            anim.SetTrigger("HoverTriggerEnter");
+        }
+        else if (checklistOpened == true)
+        {
+            anim.ResetTrigger("HoverTriggerEnter");
         }
 
-        if (Input.GetKey(KeyCode.L) && zoomedIn == true)
-        {
-            smallList.SetActive(true);
-            bigList.SetActive(false);
-            zoomedIn = false;
-        }
+
     }
 
+
+    public void OpenTrue()
+    {
+        checklistOpened = true;
+        checklistClosed = false;
+    }
+
+    public void CloseTrue()
+    {
+        checklistClosed = true;
+        checklistOpened = false;
+    }
 }
 

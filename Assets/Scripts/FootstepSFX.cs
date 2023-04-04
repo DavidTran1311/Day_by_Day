@@ -39,7 +39,7 @@ public class FootstepSFX : MonoBehaviour
         }
         else
         {
-            footsies.enabled = true;
+            return;
         }
     }
 }
