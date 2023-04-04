@@ -45,11 +45,16 @@ public class PlayerControl : MonoBehaviour
     SpriteRenderer boxsprite;
     public Sprite noOutline;
 
+    public bool start;
+    public bool endtimer;
+    public float score;
+
 
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
-        
+        start = false;
+        endtimer = false;
     }
 
     // Start is called before the first frame update
@@ -74,8 +79,6 @@ public class PlayerControl : MonoBehaviour
             return;
         }
         */
-
-        Debug.Log(paused);
 
         Movement.x = Input.GetAxisRaw("Horizontal");
         Movement.y = Input.GetAxisRaw("Vertical");
@@ -172,7 +175,7 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("isLadder", true);
             if (goal < dropOffArray.Length)
             {
-                UI.SetActive(true);
+                
             }
                 
 
@@ -205,7 +208,6 @@ public class PlayerControl : MonoBehaviour
         if (spawned != null)
         {
             boxsprite = boxPrefab.GetComponent<SpriteRenderer>();
-            Debug.Log(boxsprite);
             if (carrying == true)
             {
                 boxsprite.sprite = noOutline;
@@ -216,6 +218,12 @@ public class PlayerControl : MonoBehaviour
         if (carrying == true)
         {
             boxPrefab.transform.position = transform.position;
+
+            if (endtimer != true)
+            {
+                start = true;
+                UI.SetActive(true);
+            }
         }
 
         if (carrying == true && spawned != null)
@@ -230,7 +238,16 @@ public class PlayerControl : MonoBehaviour
         {
             lr.positionCount = 0;
         }
+
+        //ACTIVATES WHEN THE TIMER RUNS OUT
+        //END OF JOB
+        if (endtimer == true)
+        {
+            end.SetActive(true);
+            UI.SetActive(false);
+        }
         
+
 
 
     }
@@ -326,18 +343,16 @@ public class PlayerControl : MonoBehaviour
 
             boxPrefab.transform.position = dropOffArray[goal].transform.position;
             goal += 1;
+            
             GameObject.Destroy(spawned);
             Debug.Log("test");
-            if (goal < dropOffArray.Length)
+            if (endtimer != true)
             {
                 boxPrefab = GameObject.Instantiate(box, boxSpawn.transform.position, Quaternion.identity);
+                score = score + 2;
+                Debug.Log(score);
 
-
-            } else
-            {
-                end.SetActive(true);
-                UI.SetActive(false);
-            }
+            } 
             carrying = false;
         }
 
