@@ -1,8 +1,8 @@
 -> main
 
 === main ===
-... #speaker:Lily #portrait: lily_neutral
-* ... #speaker:Mr. Davis #portrais: davis_neutral
+... #speaker:Lily #portrait: lily_neutral #speaker_color: F61919
+* ... #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 003BFF
     -> silence1
 * Morning. #speaker:Mr. Davis #portrait: davis_neutral
     -> morning

@@ -18,6 +18,7 @@ public class Dialogue_Manager : MonoBehaviour
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private TextMeshProUGUI displayNameColorText;
     [SerializeField] private Animator portraitAnimator;
     private bool submitButtonPressedThisFrame = false;
 
@@ -50,6 +51,7 @@ public class Dialogue_Manager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
+    private const string SPEAKER_COLOR_TAG = "speaker_color";
 
     private Dialogue_Variables dialogueVariables;
 
@@ -249,8 +251,13 @@ public class Dialogue_Manager : MonoBehaviour
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
                     break;
-                case LAYOUT_TAG:
-                    Debug.Log("layout=" + tagValue);
+                case SPEAKER_COLOR_TAG:
+                    Color speakerColor;
+                    tagValue = "#" + tagValue;
+                    if (ColorUtility.TryParseHtmlString(tagValue, out speakerColor))
+                    {
+                        displayNameColorText.color = speakerColor;
+                    }
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is currently being handled: " + tag);
