@@ -18,7 +18,6 @@ public class newPlayerControl : MonoBehaviour
     bool paused;
 
 
-
     // Start is called before the first frame update
     void Start()
     {

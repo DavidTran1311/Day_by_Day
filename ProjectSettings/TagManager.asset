@@ -11,6 +11,7 @@ TagManager:
   - EPlace
   - based
   - trigger
+  - Lily
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class Dialogue_Trigger : MonoBehaviour
 {
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue, visualE;
-    [SerializeField] private GameObject LilyTrigger;
+    private GameObject lilyTrigger;
     public bool triggerChecklist = false;
     private bool PlayerInRange;
 
@@ -28,8 +28,6 @@ public class Dialogue_Trigger : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 Dialogue_Manager.GetInstance().EnterDialogueMode(inkJSON);
-                Debug.Log("trigger check bitch");
-
             }
 
         }
