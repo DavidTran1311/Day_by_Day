@@ -17,7 +17,7 @@ Stem cell transplants can be very costly and not to mention risky... # speaker:D
 What are the other ones? #speaker:Lily #portrait:lily_neutral
 Targeted therapy uses drugs to specifically target a type of gene or protein within the cancer cell. # speaker:Dr. Yang #portrait:drYang_neutral
 It doesn't affect the healthy cells like with chemo or radiation. # speaker:Dr. Yang #portrait:drYang_neutral
-Radiation therapy uses high-energy rays to destroy the cancer cells it it has spread to the head. # speaker:Dr. Yang #portrait:drYang_neutral
+Radiation therapy uses high-energy rays to destroy the cancer cells. # speaker:Dr. Yang #portrait:drYang_neutral
 But, like I said, it can affect healthy cells as well. # speaker:Dr. Yang #portrait:drYang_neutral
 + Why didn't you try these things in the first place? #speaker:Mr. Davis #portrait:davis_neutral
  -> notThatSimple
@@ -29,10 +29,9 @@ It's not that simple. # speaker:Dr. Yang #portrait:drYang_neutral
 It all depends on the type of leukemia and his overall needs and condition. # speaker:Dr. Yang #portrait:drYang_neutral
 George has Acute Lymphoblastic Leukemia. # speaker:Dr. Yang #portrait:drYang_neutral
 We have to consider a lot of things before we decide on a treatment for him. # speaker:Dr. Yang #portrait:drYang_neutral
-The targeted therapy treatment only work if the cells have the protein or gene attached to it. # speaker:Dr. Yang #portrait:drYang_neutral
+The targeted therapy treatment only works if the cells have the protein or gene attached to it. # speaker:Dr. Yang #portrait:drYang_neutral
 We'd have to conduct special tests to figure out if it's present at all. # speaker:Dr. Yang #portrait:drYang_neutral
 Even then, the treatment might not even work. # speaker:Dr. Yang #portrait:drYang_neutral
-Radiation is only put in place when the cancer has spread to the head. # speaker:Dr. Yang #portrait:drYang_neutral
 It's also quite dangerous for George because he's so young. # speaker:Dr. Yang #portrait:drYang_neutral
 His brain is still in development. The radiation will affect his head if he undergoes this treatment. # speaker:Dr. Yang #portrait:drYang_neutral
 But, of course, there's stem cell transplants, but they're quite risky. # speaker:Dr. Yang #portrait:drYang_neutral
