@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6945527924057293548, guid: b1994c6a7228e3a438b681abb9e6cc35, type: 3}
       propertyPath: orthographic size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6945527924057293548, guid: b1994c6a7228e3a438b681abb9e6cc35, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -729,8 +729,8 @@ Tilemap:
   - first: {x: -6, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 27
-      m_TileSpriteIndex: 27
+      m_TileIndex: 18
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -854,8 +854,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4de844c16b2b9b74d848083498f23197, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 24c0bebd667c69a46b12880e90bbd0fc, type: 2}
   - m_RefCount: 2
@@ -872,7 +872,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4e8b791029220e0459a24ffbb499ef1e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 74846387789268c45bb498b6f37089f4, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: ff31200cbcdae6547b7b387f847784f3, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cb8c4fb73c98604409d406c5f3ae2d62, type: 2}
@@ -917,8 +917,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1537358040, guid: ef6409e5faa11124282633d51acb2715, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1106454235, guid: fd16fed5fb9d0fc4cb503325d4fa3e4c, type: 3}
   - m_RefCount: 2
@@ -935,7 +935,7 @@ Tilemap:
     m_Data: {fileID: 1108067828, guid: ef6409e5faa11124282633d51acb2715, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1795719712, guid: fd16fed5fb9d0fc4cb503325d4fa3e4c, type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 8
     m_Data: {fileID: 1925526265, guid: ef6409e5faa11124282633d51acb2715, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1862815924, guid: ef6409e5faa11124282633d51acb2715, type: 3}
@@ -3064,7 +3064,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1299936769
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -117094721, guid: 68e1764fb84ec1945a41ec6b1c585ac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
