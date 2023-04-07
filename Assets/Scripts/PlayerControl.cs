@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
 
     public bool start;
     public bool endtimer;
-    public float score;
+    public static float score;
 
 
     private void Awake()
