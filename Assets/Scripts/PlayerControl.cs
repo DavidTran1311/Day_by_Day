@@ -49,6 +49,7 @@ public class PlayerControl : MonoBehaviour
     public bool endtimer;
     public static float score;
 
+    public AudioSource fallSFX;
 
     private void Awake()
     {
@@ -91,6 +92,8 @@ public class PlayerControl : MonoBehaviour
         if (lad.fall == true || lad1.fall == true || lad2.fall == true)
         {
             Debug.Log("check");
+
+            fallSFX.Play();
 
             lad.off = true;
             lad1.off = true;
