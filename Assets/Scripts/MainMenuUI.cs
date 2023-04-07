@@ -10,21 +10,23 @@ public class MainMenuUI : MonoBehaviour
 
     public Animator animator;
 
-    //[SerializeField] private GameObject twPanel; 
+    public bool clickedIt;
+
+    [SerializeField] private GameObject twPanel; 
     //[SerializeField] private GameObject StartUI;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = true;
-        //twPanel.SetActive(false);
+        twPanel.SetActive(false);
         //StartUI.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        DudeIClickedIt();
     }
 
     public void OnFadeTW()
@@ -45,8 +47,9 @@ public class MainMenuUI : MonoBehaviour
 
     public void StartGame()
     {
-        
-        animator.SetTrigger("StartGameFade");
+        Debug.Log("CLICKED");
+        clickedIt = true;
+
         //OnFadeComplete();
     }
 
@@ -71,4 +74,12 @@ public class MainMenuUI : MonoBehaviour
         Debug.Log("Quit");
     }
 
+    public void DudeIClickedIt()
+    {
+        if(clickedIt == true)
+        {
+            twPanel.SetActive(true);
+            animator.SetTrigger("StartGameFade");
+        }
+    }
 }
