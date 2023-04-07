@@ -89,7 +89,7 @@ public class RoomSwap : MonoBehaviour
 
     public void LoadBreakroomWeekTwo()
     {
-        SceneManager.LoadScene("BreakroomWeekTwo");
+        SceneManager.LoadScene("BreakroomWeek2");
         Time.timeScale = 1f;
     }
 

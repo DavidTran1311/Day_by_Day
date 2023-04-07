@@ -39,8 +39,8 @@ EditorBuildSettings:
     path: Assets/Scenes/WeekTwo/ApartmentWeekTwo.unity
     guid: f9519c0e6da8ff3479cfc55da2adc412
   - enabled: 1
-    path: Assets/Scenes/WeekTwo/BreakroomWeekTwo.unity
-    guid: 1c826c9e25a0f1e449a2d6360e90d102
+    path: Assets/Scenes/WeekTwo/BreakroomWeek2.unity
+    guid: 1e7e4862c617c1645b2b73ea0e74db7a
   - enabled: 1
     path: Assets/Scenes/WeekTwo/LadderMinigameWeek2.unity
     guid: c03ffef5c994fcf4788b2a6ddfb3258c

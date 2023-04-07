@@ -18831,6 +18831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 8278770121603875076, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
+      propertyPath: m_fontStyle
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
 --- !u!1 &1963886958
