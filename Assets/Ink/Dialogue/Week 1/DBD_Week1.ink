@@ -79,19 +79,13 @@ I just don't want to talk about it right now! Okay? #speaker:Lily #portrait: lil
 Nothing's going to happen to him. #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
 Stop worrying. #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
 My work'll take care of the bills. #speaker:Mr. Davis #portrait: davis_neutral#speaker_color: 3D77FF
-What if they stop? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-Things can change. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-I heard on the news that there's going to be a new Secretary of Health. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-What if that changes everything? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-Also, you're not exactly like you were when you were twenty, you know. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
+You're not exactly like you were when you were twenty, you know. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
 Fall over and you're in the hospital. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
 God help me if my son AND my husband are in the hospital. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
 * If you're that worried then do something about it. #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
     Nothing's going to happen. #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
     Nothing's going to happen? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     You're kidding. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    Did you forget that we live in America?? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    There is nothing calm about this country. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     There is always something about to happen. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     I can't do anything about it! #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     I don't even have a job! #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
@@ -102,8 +96,6 @@ God help me if my son AND my husband are in the hospital. #speaker:Lily #portrai
     Nothing's going to happen. #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
     Nothing's going to happen? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     You're kidding. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    Did you forget that we live in America?? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    There is nothing calm about this country. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     There is always something about to happen. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     We can't afford to not worry. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     We've got George AND Alex to take care of. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
@@ -115,10 +107,6 @@ God help me if my son AND my husband are in the hospital. #speaker:Lily #portrai
     What can I do if you get injured? #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     Alex and I... #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     Well, there's not much I can do. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    This is America. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    Nobody's going to give a shit about us. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    Nobody's going to care that we have two sons to worry about. #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
-    They're all worrying about their kids! #speaker:Lily #portrait: lily_neutral #speaker_color: 1FD125
     -> getAJob
 
 === getAJob ===
