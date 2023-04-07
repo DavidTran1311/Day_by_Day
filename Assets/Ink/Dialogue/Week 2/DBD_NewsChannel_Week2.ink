@@ -27,7 +27,7 @@ Ya' know a lot of clinics now are for-profit. # speaker: Avery #portrait:avery_n
 
 Insurance doesn't cover everything, Jordan, but for what a lot of it does cover, we wait longer and the care is inefficient. # speaker: Avery #portrait:avery_neutral
 
-It may take some personal coin, but it's something I'm wiling to spend money on. # speaker: Avery #portrait:avery_neutral
+It may take some personal coin, but it's something I'm willing to spend money on. # speaker: Avery #portrait:avery_neutral
 
 It's my life we're talking about here. # speaker: Avery #portrait:avery_neutral
 

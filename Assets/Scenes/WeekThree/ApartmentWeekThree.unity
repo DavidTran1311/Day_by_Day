@@ -4409,9 +4409,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1925761812325062857, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87094a39a5b06054c9fef0b8c23cad52, type: 3}
     - target: {fileID: 1925761812594197801, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
       propertyPath: m_text
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925761812849198614, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eb7709990ce5fd34283f615fce7166e5, type: 3}
+    - target: {fileID: 1925761813092281779, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
+      propertyPath: m_text
+      value: PRIVATIZED
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9521ad75307663a42973b8c5c63ce2c9, type: 3}
