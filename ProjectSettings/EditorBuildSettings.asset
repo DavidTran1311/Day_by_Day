@@ -12,28 +12,28 @@ EditorBuildSettings:
     path: Assets/Scenes/TW.unity
     guid: 183a123162191554fa658f96b707dbd1
   - enabled: 1
-    path: Assets/Scenes/Apartment.unity
+    path: Assets/Scenes/WeekOne/Apartment.unity
     guid: 07443e85ac52e8a43a5eb01390e491b7
   - enabled: 1
-    path: Assets/Scenes/LadderMinigame.unity
+    path: Assets/Scenes/WeekOne/LadderMinigame.unity
     guid: 7183c2a6a35b75440a47ca4cd420ec9f
   - enabled: 1
-    path: Assets/Scenes/GeorgeHospitalRoom.unity
+    path: Assets/Scenes/WeekOne/GeorgeHospitalRoom.unity
     guid: 93356e7b364e6844583750f76ff7f0d0
   - enabled: 1
     path: Assets/Scenes/HospitalER.unity
     guid: b4b63daf8d74ac64cb68a3ea6c135ac2
   - enabled: 1
-    path: Assets/Scenes/DoctorsOffice.unity
+    path: Assets/Scenes/WeekOne/DoctorsOffice.unity
     guid: f681d1e489e1305499abcff2d100b87b
   - enabled: 1
-    path: Assets/Scenes/EndScreen.unity
+    path: Assets/Scenes/WeekOne/EndScreen.unity
     guid: c1fc947c75b71ca40b413a704ab49ebc
   - enabled: 1
-    path: Assets/Scenes/ApartmentWeekEnd.unity
+    path: Assets/Scenes/WeekOne/ApartmentWeekEnd.unity
     guid: 68318a1aa9f829649916d67c9e0d47b0
   - enabled: 1
-    path: Assets/Scenes/Breakroom.unity
+    path: Assets/Scenes/WeekOne/Breakroom.unity
     guid: 7a33ca1bdb110724f822b1db31a58812
   - enabled: 1
     path: Assets/Scenes/WeekTwo/ApartmentWeekTwo.unity
@@ -52,10 +52,13 @@ EditorBuildSettings:
     guid: f39fc74104e7f1f44ad1117d6da11743
   - enabled: 1
     path: Assets/Scenes/WeekThree/BreakroomWeek3.unity
-    guid: d0b6c7c971b7b404da594b55fd582583
+    guid: 956d010127432aa41863cca0f05e6e31
   - enabled: 1
-    path: Assets/Scenes/WeekThree/LadderMinigameWeek3.unity
-    guid: 66cac053c84003b4783be92223e06a86
+    path: Assets/Scenes/WeekThree/GeorgeHospitalRoomWeek3.unity
+    guid: 05c871a4dc20d2d45b61b9ea1f2229ce
+  - enabled: 1
+    path: Assets/Scenes/WeekThree/GeorgeIsDed.unity
+    guid: 612b5def71a613848bd08e24b713a959
   - enabled: 1
     path: Assets/Scenes/WeekThree/EndScreenWeek3.unity
     guid: e24fb9f35c8b9f8449a30853c324ca1b

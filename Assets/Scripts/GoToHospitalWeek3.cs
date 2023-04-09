@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BreakroomDoorWeekTwo : MonoBehaviour
+public class GoToHospitalWeek3 : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("LadderMinigameWeek2");
+            SceneManager.LoadScene("HospitalWeek3");
         }
     }
 }

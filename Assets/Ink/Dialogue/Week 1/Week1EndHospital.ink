@@ -6,9 +6,9 @@ Hey, buddy. #speaker:Mr. Davis #portrait:davis_neutral #speaker_color: 3D77FF
 ... #speaker:Lily #portrait:lily_neutral #speaker_color: 1FD125
 Mom was just reading me a story. #speaker:George #portrait:george_neutral #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 Yeah? You really love books, don't you? #speaker:Mr. Davis #portrait:davis_neutral #speaker_color: 3D77FF
-Mhm! They're nice to listen to, but mom's not a very good storyteller :P #speaker:George #portrait:george_neutral #speaker: George #portrait: george_neutral #speaker_color: 937CE6
+Mhm! They're nice to listen to, but mom's not a very good storyteller :P #speaker:George #portrait:george_neutral #speaker_color: 937CE6
 Hey! Next time I won't read to you then. #speaker:Lily #portrait:lily_neutral #speaker_color: 1FD125
-Wait! I didn't mean it! Mommmm... #speaker:George #portrait:george_neutral
+Wait! I didn't mean it! Mommmm... #speaker:George #portrait:george_neutral #speaker_color: 937CE6
 Heh.. so, how you feeling, bud? #speaker:Mr. Davis #portrait:davis_neutral #speaker_color: 3D77FF
 A little tired... #speaker:George #portrait:george_neutral #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 ...but better now that you're here! #speaker:George #portrait:george_neutral #speaker: George #portrait: george_neutral #speaker_color: 937CE6
