@@ -5974,7 +5974,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 346239288}
         m_TargetAssemblyTypeName: PopUpQuestion, Assembly-CSharp
-        m_MethodName: LoadHome
+        m_MethodName: MainPopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6311,7 +6311,7 @@ PrefabInstance:
     - target: {fileID: 5841420503249122192, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1496356150, guid: 0096a734f1db3ca489002b0f1f0157d1, type: 3}
+      objectReference: {fileID: 21300000, guid: 486eb3e41c66fb5498c223280453e831, type: 3}
     - target: {fileID: 5841420503249122199, guid: bd9a1f5bb84b31845b9f4cacf347921a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.85

@@ -3015,7 +3015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over
+  m_text: Game End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04cd9279a50b40c4e800926191ad4a42, type: 2}
   m_sharedMaterial: {fileID: -7427978429272979822, guid: 04cd9279a50b40c4e800926191ad4a42, type: 2}

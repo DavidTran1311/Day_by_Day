@@ -19,15 +19,15 @@ public class DialogueSpace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space) && !Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
-            Dialogue_Manager.GetInstance().EnterDialogueMode(inkJSON);
-            
 
+            Dialogue_Manager.GetInstance().EnterDialogueMode(inkJSON);
         }
         else if (Input.GetKeyDown(KeyCode.E) && !Dialogue_Manager.GetInstance().DialogueIsPlaying)
         {
-            EndWeek();
+                EndWeek();
         }
     }
 

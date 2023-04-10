@@ -9,7 +9,7 @@ public class GoToHospitalWeek3 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("HospitalWeek3");
+            SceneManager.LoadScene("GeorgeHospitalRoomWeek3");
         }
     }
 }
