@@ -3,10 +3,10 @@ Buddy..? #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
 … #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 Hey, dad… #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 + How ya feeling, champ? #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
-…tired…
+…tired… #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 -> feelYa
 + You tired, buddy? #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
-…yeah…
+…yeah… #speaker: George #portrait: george_neutral #speaker_color: 937CE6
 -> feelYa
 
 === feelYa ===

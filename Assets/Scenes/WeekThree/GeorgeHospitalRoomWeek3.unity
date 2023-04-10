@@ -1763,7 +1763,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 66ce45ef93c31494a9e32cbdcb80af04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2886,7 +2886,7 @@ Transform:
   m_GameObject: {fileID: 1175457452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.67, y: -0.32, z: -2.4066}
-  m_LocalScale: {x: 1.0508716, y: 1.0508716, z: 1.0508716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1750942835}
@@ -2918,8 +2918,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178302974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.17, z: 1.0980225}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.52, z: 1.0980225}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1609200968}
@@ -2966,7 +2966,7 @@ SpriteRenderer:
   m_SortingLayerID: -2086819611
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1713015573, guid: fc200bc850eca544e9858540530e82ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 486eb3e41c66fb5498c223280453e831, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3068,7 +3068,7 @@ Transform:
   m_GameObject: {fileID: 1609200967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6616, y: -0.58352, z: -2.438}
-  m_LocalScale: {x: 1.0795, y: 1.0795, z: 1.0795}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1178302975}
@@ -3208,7 +3208,7 @@ Transform:
   m_GameObject: {fileID: 1750942834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: 0.17, z: 1.0980225}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1175457453}
@@ -3837,7 +3837,7 @@ Transform:
   m_GameObject: {fileID: 1344776879288091318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: 0.17, z: 1.0980225}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344776878972666976}
