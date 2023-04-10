@@ -454,6 +454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50badcd4ddb162940ba796a2c3eb9473, type: 3}
+--- !u!95 &260144027 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8925981781586350726, guid: e7fe16a6f70081647805b9e3aea95b32, type: 3}
+  m_PrefabInstance: {fileID: 107678832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &278190587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,7 +3011,7 @@ PrefabInstance:
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: displayNameText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 107678837}
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: loadGlobalsJSON
       value: 
@@ -3018,7 +3023,7 @@ PrefabInstance:
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: portraitAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 260144027}
     - target: {fileID: 6805347877137947848, guid: 1978f2b20fbef8645834eca8bad95fd5, type: 3}
       propertyPath: Choices.Array.size
       value: 3
