@@ -1697,11 +1697,12 @@ MonoBehaviour:
   rent: {fileID: 77602429}
   food: {fileID: 299937760}
   bills: {fileID: 2112078060}
+  insurance: {fileID: 857683235}
   total: {fileID: 1372876848}
   m_rent: -150
   m_food: -250
-  m_bills: 0
-  m_savings: 1216
+  m_bills: -948
+  m_insurance: 948
 --- !u!1 &1048475877
 GameObject:
   m_ObjectHideFlags: 0
