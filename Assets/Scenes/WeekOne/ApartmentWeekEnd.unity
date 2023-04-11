@@ -10013,6 +10013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2214822280899354636, guid: 6588a91893bb4aa4daad3164aa7e99a1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2214822281226302483, guid: 6588a91893bb4aa4daad3164aa7e99a1, type: 3}
       propertyPath: m_Name
       value: BGM
