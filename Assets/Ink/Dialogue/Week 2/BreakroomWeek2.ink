@@ -3,7 +3,7 @@
 === main ===
 Hey, Mr. Davis! #speaker: Aaliyah #portrait: aaliyah_neutral #speaker_color: 9CFF06
 AH- #speaker: Aaliyah #portrait: aaliyah_neutral #speaker_color: 9CFF06
-Oh, crap! #speaker: Aaliyah #portrait: aaliyah_neutral #speaker_color: 9CFF06
+Oh, shitballs! #speaker: Aaliyah #portrait: aaliyah_neutral #speaker_color: 9CFF06
 + What's happening? #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
 -> happening
 + You good? #speaker:Mr. Davis #portrait: davis_neutral #speaker_color: 3D77FF
